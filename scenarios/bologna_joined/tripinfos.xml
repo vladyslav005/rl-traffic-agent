@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-22T18:40:21.329565+01:00 by Eclipse SUMO GUI 1.26.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./scenarios/bologna_joined/joined_buslanes.net.xml"/>
+        <route-files value="./scenarios/bologna_joined/joined.rou.xml,./scenarios/bologna_joined/joined_busses.rou.xml"/>
+        <additional-files value="./scenarios/bologna_joined/joined_bus_stops.add.xml,./scenarios/bologna_joined/joined_detectors.add.xml,./scenarios/bologna_joined/joined_vtypes.add.xml,./scenarios/bologna_joined/joined_tls.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="./scenarios/bologna_joined/tripinfos.xml"/>
+        <save-state.prefix value="./scenarios/bologna_joined/state"/>
+    </output>
+
+    <report>
+        <log value="./scenarios/bologna_joined/sumo_log.txt"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="34797"/>
+    </traci_server>
+
+</sumoConfiguration>

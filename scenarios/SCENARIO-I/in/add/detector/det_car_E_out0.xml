@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-22T21:27:18.679512+01:00 by Eclipse SUMO GUI 1.26.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./scenarios/SCENARIO-I/in/motorway_GE_edges_300m_x16.net.xml"/>
+        <additional-files value="./scenarios/SCENARIO-I/in/add/vtype/vtype_distribution.add.xml,./scenarios/SCENARIO-I/ in/route/routesDistributions.rou.xml,./scenarios/SCENARIO-I/ in/flow/flows.flows.xml,./scenarios/SCENARIO-I/   in/add/detector/detectors.add.xml,./scenarios/SCENARIO-I/ in/add/cali/cali_E_NS_edge.add.xml,./scenarios/SCENARIO-I/ in/add/cali/cali_S_NE_edge.add.xml,./scenarios/SCENARIO-I/ in/add/cali/cali_N_ES_edge.add.xml,./scenarios/SCENARIO-I/   in/add/cali/cali_N_ES_onRamp1.add.xml,./scenarios/SCENARIO-I/ in/add/cali/cali_ES_N_onRamp1.add.xml,./scenarios/SCENARIO-I/ in/add/cali/cali_x15_E_onRamp.add.xml,./scenarios/SCENARIO-I/   in/add/cali/cali_x16_N_onRamp.add.xml"/>
+    </input>
+
+    <time>
+        <step-length value="0.25"/>
+    </time>
+
+    <processing>
+        <step-method.ballistic value="true"/>
+        <collision.mingap-factor value="0"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+        <log value="./scenarios/SCENARIO-I/sim.log"/>
+        <duration-log.statistics value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="35835"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="./scenarios/SCENARIO-I/in/gui/view_relative_speed.view.xml"/>
+        <delay value="0"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="60.00" id="detCar_E_out0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="60.00" end="120.00" id="detCar_E_out0" nVehContrib="1" flow="60.00" occupancy="0.27" speed="31.26" harmonicMeanSpeed="31.26" length="5.00" nVehEntered="1"/>
+    <interval begin="120.00" end="180.00" id="detCar_E_out0" nVehContrib="3" flow="180.00" occupancy="0.73" speed="34.41" harmonicMeanSpeed="34.34" length="5.00" nVehEntered="3"/>
+    <interval begin="180.00" end="240.00" id="detCar_E_out0" nVehContrib="3" flow="180.00" occupancy="0.83" speed="30.30" harmonicMeanSpeed="30.25" length="5.00" nVehEntered="3"/>
+    <interval begin="240.00" end="300.00" id="detCar_E_out0" nVehContrib="3" flow="180.00" occupancy="0.81" speed="30.97" harmonicMeanSpeed="30.68" length="5.00" nVehEntered="3"/>
+    <interval begin="300.00" end="360.00" id="detCar_E_out0" nVehContrib="2" flow="120.00" occupancy="0.51" speed="32.51" harmonicMeanSpeed="32.51" length="5.00" nVehEntered="2"/>
+    <interval begin="360.00" end="420.00" id="detCar_E_out0" nVehContrib="3" flow="180.00" occupancy="0.77" speed="33.00" harmonicMeanSpeed="32.55" length="5.00" nVehEntered="3"/>
+    <interval begin="420.00" end="480.00" id="detCar_E_out0" nVehContrib="1" flow="60.00" occupancy="0.27" speed="30.30" harmonicMeanSpeed="30.30" length="5.00" nVehEntered="1"/>
+    <interval begin="480.00" end="500.25" id="detCar_E_out0" nVehContrib="2" flow="355.56" occupancy="1.65" speed="29.89" harmonicMeanSpeed="29.87" length="5.00" nVehEntered="2"/>
+</detector>

@@ -1,21 +1,86 @@
-***Starting server on port 35031 ***
-Loading net-file from './scenarios/bologna/pasubio_buslanes.net.xml' ... done (16ms).
-Loading additional-files from './scenarios/bologna/pasubio_vtypes.add.xml' ... done (0ms).
+***Starting server on port 42361 ***
+Loading net-file from './scenarios/bologna/pasubio_buslanes.net.xml' ... done (23ms).
+Loading additional-files from './scenarios/bologna/pasubio_vtypes.add.xml' ... done (1ms).
 Loading additional-files from './scenarios/bologna/pasubio_bus_stops.add.xml' ... done (1ms).
-Loading additional-files from './scenarios/bologna/pasubio_busses.rou.xml' ... done (8ms).
+Loading additional-files from './scenarios/bologna/pasubio_busses.rou.xml' ... done (11ms).
 Loading additional-files from './scenarios/bologna/pasubio_detectors.add.xml' ... done (1ms).
-Loading additional-files from './scenarios/bologna/pasubio_tls.add.xml' ... done (0ms).
+Loading additional-files from './scenarios/bologna/pasubio_tls.add.xml' ... done (1ms).
 Loading route-files incrementally from './scenarios/bologna/pasubio.rou.xml'
 Loading done.
 Simulation started with time: 0.00.
-Simulation ended at time: 600.00.
+Warning: Vehicle '2_0' performs emergency braking on lane '9_0' with decel=12.60, wished=4.50, severity=3.24, time=29.00.
+Warning: Vehicle '2_0' performs emergency braking on lane '9_0' with decel=14.48, wished=4.50, severity=3.99, time=31.00.
+Warning: Vehicle '2_0' performs emergency braking on lane '35[0]_0' with decel=10.67, wished=4.50, severity=2.47, time=139.00.
+Warning: Vehicle '2_0' performs emergency braking on lane '35[0]_0' with decel=8.40, wished=4.50, severity=1.56, time=141.00.
+Warning: Vehicle '2_0' performs emergency braking on lane ':15_11_0' with decel=8.65, wished=4.50, severity=1.66, time=199.00.
+Warning: Vehicle '2_0' performs emergency braking on lane '20000+35[1][1][1][0]_0' with decel=10.50, wished=4.50, severity=2.40, time=201.00.
+Warning: Vehicle '2_0' performs emergency stop at the end of lane '20000+35[1][1][1][0]_0' because there is no connection to the next edge (decel=-10.45, offset=2.64), time=202.00.
+Warning: Teleporting vehicle 'Gandhi_60_153'; collision with vehicle 'Gandhi_60_148', lane='1[0]_1', gap=-4.00, time=274.00, stage=move.
+Warning: Teleporting vehicle 'Pertini_22_104'; collision with vehicle 'Pertini_22_103', lane='14_0', gap=-2.00, time=276.00, stage=move.
+Warning: Vehicle 'Pertini_22_104' ends teleporting on edge '17[0]', time=276.00.
+Warning: Vehicle 'Gandhi_60_153' ends teleporting on edge '1[1]', time=276.00.
+Warning: Teleporting vehicle 'Gandhi_60_153'; collision with vehicle 'Certosa_6_7', lane='1[1]_1', gap=-2.32, time=369.00, stage=move.
+Warning: Vehicle 'Gandhi_60_153' ends teleporting on edge '40[0]', time=369.00.
+Warning: Vehicle 'Gandhi_60_153' performs emergency braking on lane '40[0]_0' with decel=9.89, wished=4.50, severity=1.20, time=370.00.
+Warning: Teleporting vehicle 'Gandhi_60_153'; collision with vehicle 'Gandhi_60_175', lane='40[0]_0', gap=-3.31, time=418.00, stage=move.
+Warning: Vehicle 'Gandhi_60_153' ends teleporting on edge '40[1]', time=418.00.
+Warning: Vehicle 'Gandhi_60_153' performs emergency braking on lane '40[1]_0' with decel=9.62, wished=4.50, severity=1.14, time=419.00.
+Warning: Vehicle '1_480' performs emergency braking on lane '56[0]_0' with decel=7.00, wished=4.50, severity=1.00, time=579.00.
+Warning: Teleporting vehicle '1_480'; collision with vehicle 'Saffi_10_175', lane='56[0]_0', gap=-2.63, time=610.00, stage=move.
+Warning: Vehicle '1_480' ends teleporting on edge '56[1][0]', time=610.00.
+Warning: Vehicle '1_480' performs emergency braking on lane '56[1][0]_0' with decel=16.74, wished=4.50, severity=4.90, time=621.00.
+Warning: Teleporting vehicle '1_480'; collision with vehicle 'Montefiorino_30_105', lane='56[1][0]_0', gap=-1.62, time=622.00, stage=move.
+Warning: Vehicle '1_480' skips stop on lane '56[1][0]_0' time=622.00.
+Warning: Vehicle '1_480' ends teleporting on edge '56[1][1]', time=622.00.
+Warning: Vehicle '1_480' performs emergency braking on lane '5[1][1][1]_0' with decel=7.83, wished=4.50, severity=1.33, time=633.00.
+Warning: Vehicle '1_480' performs emergency braking on lane '5[1][1][1]_0' with decel=8.40, wished=4.50, severity=1.56, time=635.00.
+Warning: Teleporting vehicle '1_480'; collision with vehicle 'Borgo_10_62', lane='5[1][1][1]_0', gap=-7.07, time=661.00, stage=move.
+Warning: Vehicle '1_480' ends teleporting on edge '8', time=661.00.
+Warning: Teleporting vehicle '1_480'; collision with vehicle 'Pertini_22_194', lane='8_0', gap=-8.17, time=675.00, stage=move.
+Warning: Vehicle '1_480' skips stop on lane '8_0' time=675.00.
+Warning: Vehicle '1_480' ends teleporting on edge '10', time=675.00.
+Warning: Teleporting vehicle '1_480'; collision with vehicle 'Saffi_10_137', lane='10_0', gap=-2.72, time=683.00, stage=move.
+Warning: Vehicle '1_480' teleports beyond arrival edge '10', time=683.00.
+Warning: Teleporting vehicle 'Gandhi_70_428'; collision with vehicle 'Gandhi_60_425', lane='1[0]_0', gap=-8.22, time=700.00, stage=move.
+Warning: Vehicle 'Gandhi_70_428' ends teleporting on edge 'a1[1]', time=700.00.
+Warning: Teleporting vehicle 'Nigrisoli_10_125'; collision with vehicle 'Nigrisoli_90_124', lane='65_0', gap=-2.00, time=811.00, stage=move.
+Warning: Vehicle 'Nigrisoli_10_125' ends teleporting on edge '5[1][0]+66', time=811.00.
+Warning: Vehicle 'Nigrisoli_10_125' performs emergency braking on lane '5[1][0]+66_0' with decel=11.89, wished=4.50, severity=1.64, time=812.00.
+Warning: Teleporting vehicle 'Nigrisoli_40_139'; collision with vehicle 'Pertini_42_412', lane='55_0', gap=-5.33, time=1027.00, stage=move.
+Warning: Vehicle 'Nigrisoli_40_139' ends teleporting on edge '53', time=1027.00.
+Warning: Teleporting vehicle 'Saffi_30_335'; collision with vehicle 'Saffi_103_387', lane='56[0]_1', gap=-0.75, time=1248.00, stage=move.
+Warning: Vehicle 'Saffi_30_335' ends teleporting on edge '56[1][0]', time=1248.00.
+Warning: Teleporting vehicle 'Pertini_20_474'; collision with vehicle 'Pertini_20_453', lane='4[1][1][0]_1', gap=-4.00, time=1431.00, stage=move.
+Warning: Vehicle 'Pertini_20_474' ends teleporting on edge '4[1][1][1]', time=1431.00.
+Warning: Vehicle 'Pertini_20_474' performs emergency braking on lane '4[1][1][1]_0' with decel=9.89, wished=4.50, severity=1.20, time=1432.00.
+Warning: Teleporting vehicle 'Malvasia_70_243'; collision with vehicle 'Saffi_94_411', lane='39[1][0]_0', gap=-4.00, time=1451.00, stage=move.
+Warning: Vehicle 'Malvasia_70_243' ends teleporting on edge '39[1][1][0]', time=1472.00.
+Warning: Teleporting vehicle 'Malvasia_70_243'; collision with vehicle 'Saffi_60_402', lane='39[1][1][0]_0', gap=-1.32, time=1479.00, stage=move.
+Warning: Vehicle 'Malvasia_70_243' ends teleporting on edge '39[1][1][1]', time=1479.00.
+Warning: Vehicle 'Malvasia_70_243' performs emergency braking on lane '39[1][1][1]_1' with decel=9.89, wished=4.50, severity=1.20, time=1480.00.
+Warning: Teleporting vehicle 'Malvasia_70_243'; collision with vehicle 'Pertini_74_574', lane='45_2', gap=-3.97, time=1509.00, stage=move.
+Warning: Vehicle 'Malvasia_70_243' ends teleporting on edge '44', time=1509.00.
+Warning: Vehicle 'Malvasia_70_243' performs emergency braking on lane '44_0' with decel=9.89, wished=4.50, severity=1.20, time=1510.00.
+Warning: Teleporting vehicle 'Pertini_20_698'; collision with vehicle 'Pertini_20_693', lane='4[1][1][0]_0', gap=-2.00, time=1679.00, stage=move.
+Warning: Vehicle 'Pertini_20_698' ends teleporting on edge '4[1][1][1]', time=1679.00.
+Warning: Vehicle 'Pertini_20_698' performs emergency braking on lane '4[1][1][1]_1' with decel=11.89, wished=4.50, severity=1.64, time=1680.00.
+Warning: Teleporting vehicle 'Montefiorino_20_376'; collision with vehicle 'Montefiorino_90_375', lane='81_2', gap=-2.00, time=1698.00, stage=move.
+Warning: Vehicle 'Montefiorino_20_376' ends teleporting on edge '2[0]', time=1698.00.
+Warning: Vehicle 'Montefiorino_20_376' performs emergency braking on lane '2[0]_0' with decel=11.89, wished=4.50, severity=1.64, time=1699.00.
+Warning: Teleporting vehicle 'Malvasia_94_292'; junction collision with vehicle 'Malvasia_95_320', lane=':3_2_0', gap=-3.13, time=1870.00, stage=move.
+Warning: Vehicle 'Malvasia_94_292' ends teleporting on edge '2[1][1][1]', time=1872.00.
+Warning: Vehicle 'Malvasia_94_292' performs emergency braking on lane '2[1][1][1]_0' with decel=9.41, wished=4.50, severity=1.09, time=1873.00.
+Simulation ended at time: 1995.00.
 Reason: TraCI requested termination.
 Performance:
- Duration: 40.95s
- TraCI-Duration: 1.13s
- Real time factor: 14.6509
- UPS: 6032.378580
+ Duration: 18.93s
+ TraCI-Duration: 5.07s
+ Real time factor: 105.366
+ UPS: 63124.326608
 Vehicles:
- Inserted: 1462 (Loaded: 1567)
- Running: 540
- Waiting: 1
+ Inserted: 4865 (Loaded: 4950)
+ Running: 773
+ Waiting: 2
+ Teleports: 20 (Collisions: 20)
+ Emergency Stops: 1
+ Emergency Braking: 19

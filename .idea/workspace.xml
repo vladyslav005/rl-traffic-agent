@@ -2,52 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="chore: add scenarios">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/DT_GM_live24h.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/DT_GM_live24h.sumocfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/ODPMS_traffic_counters_request_live.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/Results/res_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/functions_DT_GE_live24h.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_ES_N_onRamp1.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_E_NS_edge.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_N_ES_edge.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_N_ES_onRamp1.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_S_NE_edge.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_x15_E_onRamp.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/cali/cali_x16_N_onRamp.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/detector/det_car_E_out0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/detector/det_car_E_out1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/detector/det_truck_E_out0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/detector/det_truck_E_out1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/detector/detectors.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/add/vtype/vtype_distribution.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/flow/flows.flows.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/gui/view_relative_speed.view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/motorway_GE_edges_300m_x16.net.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/SCENARIO-I/in/route/routesDistributions.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/LKW_automatic.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/PKW_automatic.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/PKW_automatic.rou.xml.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/busStops.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/bus_route.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/edgeOutputs.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/network.net.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/network.net.xml.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/run_simulation.sumocfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/TAVF-Hamburg/vType.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_bus_stops.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_buslanes.net.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_busses.rou.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_detectors.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_tls.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_vtypes.add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenarios/bologna_joined/run.sumocfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sumo_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rl-traffic-agent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rl-traffic-agent.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/bologna/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna/e1_output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/bologna/sumo_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna/sumo_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/bologna/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna/tripinfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DQN.py" beforeDir="false" afterPath="$PROJECT_DIR$/DQN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplayBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReplayBuffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/joined.rou.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined.rou.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/joined_vtypes.add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined_vtypes.add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent/scenarios",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vladik/repositories/rl-traffic-agent/scenarios&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scenarios" />
@@ -121,7 +89,9 @@
       <workItem from="1773222912919" duration="10000" />
       <workItem from="1774021808398" duration="546000" />
       <workItem from="1774022381371" duration="3803000" />
-      <workItem from="1774184881716" duration="12366000" />
+      <workItem from="1774184881716" duration="12975000" />
+      <workItem from="1774432822625" duration="92000" />
+      <workItem from="1774805937544" duration="6410000" />
     </task>
     <task id="LOCAL-00001" summary="feat: DQN + replay buffer + target net">
       <option name="closed" value="true" />
@@ -147,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774211445104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore: add scenarios">
+      <option name="closed" value="true" />
+      <created>1774211454427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774211454427</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

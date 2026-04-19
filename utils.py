@@ -3,6 +3,7 @@ import random
 from torch import nn
 
 from sumo_utils import *
+import config
 
 
 def epsilon_by_step(global_step):
@@ -53,7 +54,6 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
     reset_sumo()
     spawn_ego(route_id)
 
-    ################### Optional: set camera to follow ego for better visualization ###################
 
     # let SUMO advance one step so vehicle is fully inserted
     traci.simulationStep()
@@ -68,11 +68,11 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
     #     print("Warning: GUI tracking failed, continuing without it.")
 
     episode_reward = 0.0
+    episode_ego_crashes = 0
     episode_loss_values = []
 
     state = get_state(EGO_ID)
 
-    # traci.gui.trackVehicle("View #0", "ego")
 
     for step in range(MAX_STEPS_PER_EPISODE):
         epsilon = epsilon_by_step(global_step)
@@ -82,6 +82,57 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
 
         traci.simulationStep()
         global_step += 1
+
+        # CRASH TRACKING
+        colliding_ids = traci.simulation.getCollidingVehiclesIDList()
+        collision_events = traci.simulation.getCollisions()
+        teleport_ids = traci.simulation.getStartingTeleportIDList()
+        emergency_ids = traci.simulation.getEmergencyStoppingVehiclesIDList()
+
+        config.TOTAL_COLLISION_EVENTS += len(collision_events)
+
+        ego_collision = EGO_ID in colliding_ids
+        ego_teleport = EGO_ID in teleport_ids
+        ego_emergency = EGO_ID in emergency_ids
+
+        if ego_collision:
+            config.TOTAL_EGO_COLLISIONS += 1
+
+        if ego_teleport:
+            config.TOTAL_EGO_TELEPORTS += 1
+
+        if ego_emergency:
+            config.TOTAL_EGO_EMERGENCY_STOPS += 1
+
+        if ego_collision or ego_teleport or ego_emergency:
+            config.TOTAL_EGO_CRASHES += 1
+
+        ego_crashed = EGO_ID in colliding_ids
+
+        if ego_crashed:
+            episode_ego_crashes += 1
+
+            reward = -30.0
+            next_state = np.zeros_like(state, dtype=np.float32)
+            done = 1.0
+
+            replay_buffer.push(state, int(action), reward, next_state, done)
+
+            loss = train_step(policy_net, target_net, optimizer, replay_buffer)
+            if loss is not None:
+                episode_loss_values.append(loss)
+
+            if global_step % TARGET_UPDATE_FREQ == 0:
+                target_net.load_state_dict(policy_net.state_dict())
+
+            episode_reward += reward
+
+            return (
+                episode_reward,
+                step + 1,
+                global_step,
+                "ego_crash",
+            )
 
         # terminal checks after the environment step
         if is_arrived():

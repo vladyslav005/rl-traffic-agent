@@ -6,7 +6,14 @@ from config import *
 
 
 def start_sumo():
-    traci.start([SUMO_BINARY, "-c", SUMO_CONFIG])
+    traci.start([
+        SUMO_BINARY,
+        "-c", SUMO_CONFIG,
+        # "--collision.action", "warn",
+        "--collision.check-junctions", "true",
+        "--collision.mingap-factor", "0",
+         "--aggregate-warnings", "5"
+    ])
 
 
 def reset_sumo():

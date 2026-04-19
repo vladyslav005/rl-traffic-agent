@@ -34,3 +34,9 @@ EGO_ROUTE_POOL = [
 ]
 # vehicle type should exist in your SUMO files, or use "passenger"
 EGO_TYPE_ID = "egoType"
+
+TOTAL_EGO_CRASHES = 0
+TOTAL_COLLISION_EVENTS = 0
+TOTAL_EGO_COLLISIONS = 0
+TOTAL_EGO_TELEPORTS = 0
+TOTAL_EGO_EMERGENCY_STOPS = 0

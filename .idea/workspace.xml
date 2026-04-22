@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="chore: training in episodes">
-      <change afterPath="$PROJECT_DIR$/logger_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/joined.rou.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/joined.rou.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sumo_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/sumo_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,23 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vladik/repositories/rl-traffic-agent/scenarios&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.config.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "git-widget-placeholder": "DQN",
+    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scenarios" />
@@ -91,6 +90,8 @@
       <workItem from="1774805937544" duration="13483000" />
       <workItem from="1774957231185" duration="20000" />
       <workItem from="1776243650317" duration="11000" />
+      <workItem from="1776596794381" duration="213000" />
+      <workItem from="1776864704131" duration="7972000" />
     </task>
     <task id="LOCAL-00001" summary="feat: DQN + replay buffer + target net">
       <option name="closed" value="true" />
@@ -137,6 +138,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: DQN + replay buffer + target net" />

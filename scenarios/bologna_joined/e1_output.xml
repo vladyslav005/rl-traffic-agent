@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-30T15:16:23.903473+01:00 by Eclipse SUMO sumo 1.26.0
+<!-- generated on 2026-04-22T17:59:16.297677+01:00 by Eclipse SUMO sumo 1.26.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -15,22 +15,20 @@
     </output>
 
     <processing>
+        <collision.action value="warn"/>
         <collision.check-junctions value="true"/>
         <collision.mingap-factor value="0"/>
     </processing>
 
     <report>
         <aggregate-warnings value="5"/>
-        <log value="scenarios/bologna_joined/sumo_log.txt"/>
+        <log value="sim_logs/sumo.log"/>
+        <log.timestamps value="true"/>
         <no-step-log value="true"/>
     </report>
 
     <traci_server>
-        <remote-port value="32873"/>
+        <remote-port value="46239"/>
     </traci_server>
 
 </sumoConfiguration>
--->
-
-<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
-</detector>

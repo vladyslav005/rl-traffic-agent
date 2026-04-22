@@ -1,20 +1,42 @@
+import os
+
 import numpy as np
 import traci
 
 from Action import ACTION_TO_DELTA_V, Action
 from config import *
 
+CURRENT_USE_GUI = False
 
-def start_sumo():
-    traci.start([
-        SUMO_BINARY,
+
+def start_sumo(use_gui=False,
+               log_dir="sim_logs",
+               quiet_console=False,
+               hide_warnings=False):
+    global CURRENT_USE_GUI
+    CURRENT_USE_GUI = use_gui
+
+    os.makedirs(log_dir, exist_ok=True)
+
+    binary = "sumo-gui" if use_gui else SUMO_BINARY
+    cmd = [
+        binary,
         "-c", SUMO_CONFIG,
-        # "--collision.action", "warn",
+        "--collision.action", "warn",
         "--collision.check-junctions", "true",
         "--collision.mingap-factor", "0",
-         "--aggregate-warnings", "5"
-    ])
+        "--aggregate-warnings", "5",
+        "--log", os.path.join(log_dir, "sumo.log"),
+        "--log.timestamps", "true",
+    ]
 
+    if quiet_console:
+        cmd += ["--no-step-log", "true"]
+
+    if hide_warnings:
+        cmd += ["--no-warnings", "true"]
+
+    traci.start(cmd)
 
 def reset_sumo():
     """
@@ -26,29 +48,81 @@ def reset_sumo():
     start_sumo()
 
 
-def spawn_ego(route_id):
+def spawn_ego(route_id, wait_steps=30):
     """
-    Adds a dedicated ego vehicle at the beginning of an episode.
-    Assumes route_id already exists in SUMO route definitions.
+    Add ego once, then wait for insertion into the network.
+
+    Returns:
+        (success: bool, reason: str)
+        reason in {"spawned", "invalid_route", "spawn_blocked", "spawn_error"}
     """
-    if EGO_ID in traci.vehicle.getIDList():
-        traci.vehicle.remove(EGO_ID)
+    # Clean up any previous ego that is still around
+    try:
+        if EGO_ID in traci.vehicle.getIDList():
+            traci.vehicle.remove(EGO_ID)
+    except Exception:
+        pass
 
     depart_lane = "best"
     depart_speed = "0"
-    traci.vehicle.add(
-        vehID=EGO_ID,
-        routeID=route_id,
-        typeID=EGO_TYPE_ID,
-        departLane=depart_lane,
-        departSpeed=depart_speed
-    )
+    depart_pos = "base"
 
-    # optional: highlight ego in GUI
+    # Add only once
     try:
-        traci.vehicle.setColor(EGO_ID, (255, 0, 0, 255))
+        traci.vehicle.add(
+            vehID=EGO_ID,
+            routeID=route_id,
+            typeID=EGO_TYPE_ID,
+            departLane=depart_lane,
+            departSpeed=depart_speed,
+            departPos=depart_pos,
+        )
+    except traci.exceptions.TraCIException as e:
+        msg = str(e)
+
+        if "has no valid route" in msg or "No connection between edge" in msg:
+            return False, "invalid_route"
+
+        if "already exists" in msg:
+            # stale vehicle state; try to remove once and fail cleanly
+            try:
+                traci.vehicle.remove(EGO_ID)
+            except Exception:
+                pass
+            return False, "spawn_error"
+
+        return False, f"spawn_error: {msg}"
+    except Exception as e:
+        return False, f"spawn_error: {e}"
+
+    # Wait for SUMO to actually insert the vehicle on the road
+    for step in range(wait_steps):
+        traci.simulationStep()
+
+        if EGO_ID in traci.vehicle.getIDList():
+            try:
+                if CURRENT_USE_GUI:
+                    traci.vehicle.setColor(EGO_ID, (255, 0, 0, 255))
+            except Exception:
+                pass
+
+            # Only works in sumo-gui; harmless if unavailable
+            try:
+                if CURRENT_USE_GUI:
+                    traci.gui.trackVehicle("View #0", EGO_ID)
+            except Exception:
+                pass
+
+            return True, "spawned"
+
+    # Vehicle never appeared on the road -> likely blocked insertion
+    try:
+        if EGO_ID in traci.vehicle.getIDList():
+            traci.vehicle.remove(EGO_ID)
     except Exception:
         pass
+
+    return False, "spawn_blocked"
 
 
 def ego_exists():

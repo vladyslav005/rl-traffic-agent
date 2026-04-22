@@ -124,6 +124,29 @@ def spawn_ego(route_id, wait_steps=30):
 
     return False, "spawn_blocked"
 
+def spawn_smpl(route_id):
+    """
+    Add ego once, then wait for insertion into the network.
+
+    Returns:
+        (success: bool, reason: str)
+        reason in {"spawned", "invalid_route", "spawn_blocked", "spawn_error"}
+    """
+    # Clean up any previous ego that is still around
+
+    depart_lane = "best"
+    depart_speed = "0"
+    depart_pos = "base"
+
+    traci.vehicle.add(
+        vehID=EGO_ID,
+        routeID=route_id,
+        typeID=EGO_TYPE_ID,
+        departLane=depart_lane,
+        departSpeed=depart_speed,
+        departPos=depart_pos
+    )
+
 
 def ego_exists():
     return EGO_ID in traci.vehicle.getIDList()

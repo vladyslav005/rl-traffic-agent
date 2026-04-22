@@ -1,7 +1,10 @@
 import random
 
-from torch import nn
+from torch import nn, optim
 
+from DQN import DQN
+from ReplayBuffer import ReplayBuffer
+from logger_utils import EpisodeLogger, default_episode_log_path
 from sumo_utils import *
 import config
 
@@ -186,3 +189,71 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
         replay_buffer.push(state, int(Action.KEEP), reward, next_state, done)
 
     return episode_reward, MAX_STEPS_PER_EPISODE, global_step, "timeout"
+
+
+def run_loaded_model_on_route(model_path, route_id, use_gui=False, max_steps=None):
+    """
+    Load a trained DQN model and run one evaluation episode on a chosen route.
+
+    Returns:
+        episode_reward, steps, end_reason
+    """
+    if max_steps is None:
+        max_steps = MAX_STEPS_PER_EPISODE
+
+    # start TraCI/SUMO if not already started
+    try:
+        traci.getConnection()
+    except Exception:
+        start_sumo(use_gui=use_gui)
+
+    state_dim = 8
+    action_dim = len(Action)
+
+    policy_net = DQN(state_dim, action_dim).to(DEVICE)
+    policy_net.load_state_dict(torch.load(model_path, map_location=DEVICE))
+    policy_net.eval()
+
+    reset_sumo()
+
+    spawn_smpl(route_id)
+
+    traci.simulationStep()
+
+    episode_reward = 0.0
+    state = get_state(EGO_ID)
+
+    for step in range(max_steps):
+        with torch.no_grad():
+            state_t = torch.tensor(state, dtype=torch.float32, device=DEVICE).unsqueeze(0)
+            q_values = policy_net(state_t)
+            action_idx = int(torch.argmax(q_values, dim=1).item())
+            action = Action(action_idx)
+
+        delta_v = apply_action(EGO_ID, action)
+
+        traci.simulationStep()
+
+        if EGO_ID in traci.simulation.getCollidingVehiclesIDList():
+            reward = -30.0
+            episode_reward += reward
+            return episode_reward, step + 1, "ego_crash"
+
+        if is_arrived():
+            reward = 20.0
+            episode_reward += reward
+            return episode_reward, step + 1, "arrived"
+
+        if is_abnormal_disappearance():
+            reward = -20.0
+            episode_reward += reward
+            return episode_reward, step + 1, "abnormal_end"
+
+        if not ego_exists():
+            return episode_reward, step + 1, "ego_missing"
+
+        reward = compute_reward(EGO_ID, delta_v)
+        episode_reward += reward
+        state = get_state(EGO_ID)
+
+    return episode_reward, max_steps, "timeout"

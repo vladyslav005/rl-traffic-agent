@@ -192,16 +192,20 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
 
 
 def run_loaded_model_on_route(model_path, route_id, use_gui=False, max_steps=None):
-    """
-    Load a trained DQN model and run one evaluation episode on a chosen route.
+    """Load a trained DQN model and run one evaluation episode on a chosen route.
+
+    Important:
+        When started via TraCI, SUMO runs in client-controlled mode. Don't click
+        the GUI "Step" button while this function is running. Advance time only
+        through `traci.simulationStep()` (which this function does internally).
 
     Returns:
-        episode_reward, steps, end_reason
+        (episode_reward, steps, end_reason)
     """
     if max_steps is None:
         max_steps = MAX_STEPS_PER_EPISODE
 
-    # start TraCI/SUMO if not already started
+    # Start TraCI/SUMO if not already started
     try:
         traci.getConnection()
     except Exception:
@@ -214,26 +218,29 @@ def run_loaded_model_on_route(model_path, route_id, use_gui=False, max_steps=Non
     policy_net.load_state_dict(torch.load(model_path, map_location=DEVICE))
     policy_net.eval()
 
-    reset_sumo()
+    # Reset in the same mode the user requested (GUI/headless)
+    reset_sumo(use_gui=use_gui)
 
-    spawn_smpl(route_id)
-
-    traci.simulationStep()
+    ok, reason = spawn_ego(route_id)
+    if not ok:
+        return 0.0, 0, f"spawn_failed:{reason}"
 
     episode_reward = 0.0
     state = get_state(EGO_ID)
 
     for step in range(max_steps):
+        # Choose action from current state
         with torch.no_grad():
             state_t = torch.tensor(state, dtype=torch.float32, device=DEVICE).unsqueeze(0)
             q_values = policy_net(state_t)
             action_idx = int(torch.argmax(q_values, dim=1).item())
             action = Action(action_idx)
 
+        # Apply action, then advance SUMO by one tick
         delta_v = apply_action(EGO_ID, action)
-
         traci.simulationStep()
 
+        # Terminal checks
         if EGO_ID in traci.simulation.getCollidingVehiclesIDList():
             reward = -30.0
             episode_reward += reward
@@ -257,3 +264,4 @@ def run_loaded_model_on_route(model_path, route_id, use_gui=False, max_steps=Non
         state = get_state(EGO_ID)
 
     return episode_reward, max_steps, "timeout"
+

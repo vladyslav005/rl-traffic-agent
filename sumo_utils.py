@@ -241,7 +241,7 @@ def compute_reward(veh_id, delta_v):
     # approaching red light too fast
     if tls_red > 0.5 and tls_dist < 0.25 and ego_speed > 5.0:
         reward -= 5.0
-
+# approaching yellow light too fast
     # comfort / smoothness penalty
     reward -= 0.2 * abs(delta_v)
 

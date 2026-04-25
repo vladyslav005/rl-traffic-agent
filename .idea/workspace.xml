@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/gui_manual_step.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ego_events.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_1.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_100.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_100.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_150.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_150.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_200.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_200.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_250.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_250.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_300.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_300.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_350.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_350.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_400.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_400.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_450.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_450.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_50.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_50.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dqn_training/dqn_ego_episode_500.pth" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/dqn_ego_episode_500.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/train_20260422_193601.tsv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_logs/all_stderr.log" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/all_stderr.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_logs/all_stdout.log" beforeDir="false" afterPath="$PROJECT_DIR$/dqn_training_1/all_stdout.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_logs/sumo.log" beforeDir="false" afterPath="$PROJECT_DIR$/PROJECT_OVERVIEW.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sumo_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/sumo_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +66,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "git-widget-placeholder": "DQN",
-    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent",
+    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent/sim_logs",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
@@ -57,11 +74,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sim_logs" />
+      <recent name="$PROJECT_DIR$/dqn_training" />
       <recent name="$PROJECT_DIR$/scenarios" />
       <recent name="$PROJECT_DIR$/scenarios/TAVF-Hamburg" />
       <recent name="$PROJECT_DIR$/scenarios/bologna_joined" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dqn_training_2" />
       <recent name="$PROJECT_DIR$/logs" />
       <recent name="$PROJECT_DIR$/scenarios/bologna" />
     </key>
@@ -92,6 +112,7 @@
       <workItem from="1776243650317" duration="11000" />
       <workItem from="1776596794381" duration="213000" />
       <workItem from="1776864704131" duration="15489000" />
+      <workItem from="1777142140285" duration="5569000" />
     </task>
     <task id="LOCAL-00001" summary="feat: DQN + replay buffer + target net">
       <option name="closed" value="true" />

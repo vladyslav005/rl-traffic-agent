@@ -2,6 +2,7 @@ import os
 
 import numpy as np
 import traci
+from traci import TraCIException
 
 from Action import ACTION_TO_DELTA_V, Action
 from config import *
@@ -38,14 +39,35 @@ def start_sumo(use_gui=False,
 
     traci.start(cmd)
 
-def reset_sumo():
+
+def _traci_is_connected() -> bool:
+    """Best-effort check whether a TraCI connection is currently alive."""
+    try:
+        _ = traci.simulation.getTime()
+        return True
+    except Exception:
+        return False
+
+
+def reset_sumo(use_gui=None):
+    """Reset strategy: close current simulation and restart.
+
+    Args:
+        use_gui:
+            - None: restart with the same mode as the current run (CURRENT_USE_GUI)
+            - bool: explicitly restart in GUI/headless mode
     """
-    Simplest reset strategy:
-    close current simulation and restart.
-    Slow but clean and easy to debug.
-    """
-    traci.close()
-    start_sumo()
+    if use_gui is None:
+        use_gui = CURRENT_USE_GUI
+
+    # Close only if connection exists; avoids exceptions on first reset.
+    if _traci_is_connected():
+        try:
+            traci.close()
+        except Exception:
+            pass
+
+    start_sumo(use_gui=use_gui)
 
 
 def spawn_ego(route_id, wait_steps=30):
@@ -77,7 +99,7 @@ def spawn_ego(route_id, wait_steps=30):
             departSpeed=depart_speed,
             departPos=depart_pos,
         )
-    except traci.exceptions.TraCIException as e:
+    except TraCIException as e:
         msg = str(e)
 
         if "has no valid route" in msg or "No connection between edge" in msg:
@@ -257,4 +279,3 @@ def is_abnormal_disappearance():
     Ego no longer exists and did not arrive normally.
     """
     return (not ego_exists()) and (not is_arrived())
-

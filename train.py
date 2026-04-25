@@ -11,17 +11,40 @@ from sumo_utils import start_sumo
 from logger_utils import EpisodeLogger, default_episode_log_path
 import sys
 
-start_sumo()
+# Choose whether to resume from a checkpoint.
+# RESUME_PATH = "./dqn_training/dqn_ego_episode_500.pth"
+# RESUME_OPTIM_PATH = "./dqn_training/dqn_ego_episode_500.optim.pth"
+RESUME_PATH = False #"./dqn_training/dqn_ego_episode_500.pth"
+RESUME_OPTIM_PATH = False #"./dqn_training/dqn_ego_episode_500.optim.pth"
+START_EPISODE = 0
+
+# Start SUMO once; each episode calls reset_sumo() internally.
+start_sumo(use_gui=False)
 
 state_dim = 8
 action_dim = len(Action)
 
 policy_net = DQN(state_dim, action_dim).to(DEVICE)
 target_net = DQN(state_dim, action_dim).to(DEVICE)
+
+# (1) Load weights
+if RESUME_PATH:
+    policy_net.load_state_dict(torch.load(RESUME_PATH, map_location=DEVICE))
+
+# (2) Target starts equal to policy
 target_net.load_state_dict(policy_net.state_dict())
 target_net.eval()
+policy_net.train()
 
 optimizer = optim.Adam(policy_net.parameters(), lr=LR)
+
+# (3) Load optimizer state if available (recommended to truly "continue")
+if RESUME_OPTIM_PATH:
+    try:
+        optimizer.load_state_dict(torch.load(RESUME_OPTIM_PATH, map_location=DEVICE))
+    except FileNotFoundError:
+        pass
+
 replay_buffer = ReplayBuffer(BUFFER_CAPACITY)
 
 global_step = 0
@@ -30,7 +53,7 @@ global_step = 0
 episode_logger = EpisodeLogger(default_episode_log_path())
 print(f"Logging episodes to: {episode_logger.path}")
 
-for episode in range(NUM_EPISODES):
+for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
 
     ep_reward, ep_steps, global_step, end_reason = run_episode(
         policy_net, target_net, optimizer, replay_buffer, global_step
@@ -65,6 +88,6 @@ for episode in range(NUM_EPISODES):
 
     # optional checkpoint
     if (episode + 1) % 50 == 0:
-        torch.save(policy_net.state_dict(), f"dqn_training/dqn_ego_episode_{episode+1}.pth")
+        torch.save(policy_net.state_dict(), f"dqn_training_2/dqn_ego_episode_{episode+1}.pth")
 
 traci.close()

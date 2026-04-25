@@ -1,12 +1,36 @@
 import random
 
-from torch import nn, optim
+import torch
+from torch import nn
 
 from DQN import DQN
-from ReplayBuffer import ReplayBuffer
-from logger_utils import EpisodeLogger, default_episode_log_path
-from sumo_utils import *
+from sumo_utils import (
+    Action,
+    DEVICE,
+    EGO_ID,
+    EGO_ROUTE_POOL,
+    EPS_DECAY,
+    EPS_END,
+    EPS_START,
+    GAMMA,
+    MAX_STEPS_PER_EPISODE,
+    MIN_REPLAY_SIZE,
+    BATCH_SIZE,
+    TARGET_UPDATE_FREQ,
+    apply_action,
+    compute_reward,
+    ego_exists,
+    get_state,
+    is_abnormal_disappearance,
+    is_arrived,
+    reset_sumo,
+    spawn_ego,
+    start_sumo,
+    traci,
+    np,
+)
 import config
+from ego_events import EgoEventState, accumulate_ego_events
 
 
 def epsilon_by_step(global_step):
@@ -57,25 +81,20 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
     reset_sumo()
     spawn_ego(route_id)
 
-
     # let SUMO advance one step so vehicle is fully inserted
     traci.simulationStep()
 
     if not ego_exists():
         return 0.0, 0, global_step, "spawn_failed"
 
-    # try:
-    #     traci.gui.trackVehicle("View #0", EGO_ID)
-    #     traci.gui.setZoom("View #0", 1000)
-    # except:
-    #     print("Warning: GUI tracking failed, continuing without it.")
-
     episode_reward = 0.0
     episode_ego_crashes = 0
     episode_loss_values = []
 
-    state = get_state(EGO_ID)
+    # Event de-duplication / counting state (reset every episode)
+    event_state = EgoEventState()
 
+    state = get_state(EGO_ID)
 
     for step in range(MAX_STEPS_PER_EPISODE):
         epsilon = epsilon_by_step(global_step)
@@ -86,29 +105,25 @@ def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
         traci.simulationStep()
         global_step += 1
 
-        # CRASH TRACKING
+        # CRASH / INCIDENT TRACKING (de-duplicated)
         colliding_ids = traci.simulation.getCollidingVehiclesIDList()
         collision_events = traci.simulation.getCollisions()
         teleport_ids = traci.simulation.getStartingTeleportIDList()
         emergency_ids = traci.simulation.getEmergencyStoppingVehiclesIDList()
 
-        config.TOTAL_COLLISION_EVENTS += len(collision_events)
-
-        ego_collision = EGO_ID in colliding_ids
-        ego_teleport = EGO_ID in teleport_ids
-        ego_emergency = EGO_ID in emergency_ids
-
-        if ego_collision:
-            config.TOTAL_EGO_COLLISIONS += 1
-
-        if ego_teleport:
-            config.TOTAL_EGO_TELEPORTS += 1
-
-        if ego_emergency:
-            config.TOTAL_EGO_EMERGENCY_STOPS += 1
-
-        if ego_collision or ego_teleport or ego_emergency:
-            config.TOTAL_EGO_CRASHES += 1
+        event_state, delta = accumulate_ego_events(
+            state=event_state,
+            ego_id=EGO_ID,
+            sim_time=traci.simulation.getTime(),
+            collisions=collision_events,
+            teleport_ids=teleport_ids,
+            emergency_ids=emergency_ids,
+        )
+        config.TOTAL_COLLISION_EVENTS += delta.total_collision_events
+        config.TOTAL_EGO_COLLISIONS += delta.total_ego_collisions
+        config.TOTAL_EGO_CRASHES += delta.total_ego_crashes
+        config.TOTAL_EGO_TELEPORTS += delta.total_ego_teleports
+        config.TOTAL_EGO_EMERGENCY_STOPS += delta.total_ego_emergency_stops
 
         ego_crashed = EGO_ID in colliding_ids
 

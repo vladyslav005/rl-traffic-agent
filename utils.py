@@ -75,8 +75,10 @@ def train_step(policy_net, target_net, optimizer, replay_buffer):
 
     return loss.item()
 
-def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step):
-    route_id = random.choice(EGO_ROUTE_POOL)
+def run_episode(policy_net, target_net, optimizer, replay_buffer, global_step, route_id=False):
+
+    if not route_id:
+        route_id = random.choice(EGO_ROUTE_POOL)
 
     reset_sumo()
     spawn_ego(route_id)
@@ -226,7 +228,7 @@ def run_loaded_model_on_route(model_path, route_id, use_gui=False, max_steps=Non
     except Exception:
         start_sumo(use_gui=use_gui)
 
-    state_dim = 8
+    state_dim = 12
     action_dim = len(Action)
 
     policy_net = DQN(state_dim, action_dim).to(DEVICE)

@@ -1,4 +1,6 @@
 # %%
+import random
+
 import traci
 import config
 from utils import epsilon_by_step, run_episode
@@ -21,7 +23,7 @@ START_EPISODE = 0
 # Start SUMO once; each episode calls reset_sumo() internally.
 start_sumo(use_gui=False)
 
-state_dim = 8
+state_dim = 12
 action_dim = len(Action)
 
 policy_net = DQN(state_dim, action_dim).to(DEVICE)
@@ -55,8 +57,10 @@ print(f"Logging episodes to: {episode_logger.path}")
 
 for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
 
+    route_id = random.choice(EGO_ROUTE_POOL)
+
     ep_reward, ep_steps, global_step, end_reason = run_episode(
-        policy_net, target_net, optimizer, replay_buffer, global_step
+        policy_net, target_net, optimizer, replay_buffer, global_step, route_id
     )
 
 
@@ -79,6 +83,7 @@ for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
         reward=ep_reward,
         steps=ep_steps,
         end_reason=end_reason,
+        route_id=route_id,
         total_ego_crashes=config.TOTAL_EGO_CRASHES,
         total_collision_events=config.TOTAL_COLLISION_EVENTS,
         total_ego_collisions=config.TOTAL_EGO_COLLISIONS,
@@ -88,6 +93,6 @@ for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
 
     # optional checkpoint
     if (episode + 1) % 50 == 0:
-        torch.save(policy_net.state_dict(), f"dqn_training_2/dqn_ego_episode_{episode+1}.pth")
+        torch.save(policy_net.state_dict(), f"dqn_training_4/dqn_ego_episode_{episode+1}.pth")
 
 traci.close()

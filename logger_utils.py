@@ -20,7 +20,7 @@ class EpisodeLogger:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         if not self.path.exists():
             self.path.write_text(
-                "timestamp\tepisode\treward\tsteps\tend_reason\t"
+                "timestamp\tepisode\treward\tsteps\tend_reason\troute\t"
                 "TOTAL_EGO_CRASHES\tTOTAL_COLLISION_EVENTS\tTOTAL_EGO_COLLISIONS\t"
                 "TOTAL_EGO_TELEPORTS\tTOTAL_EGO_EMERGENCY_STOPS\n",
                 encoding="utf-8",
@@ -33,6 +33,7 @@ class EpisodeLogger:
         reward: float,
         steps: int,
         end_reason: str,
+        route_id: Optional[str] = None,
         total_ego_crashes: int,
         total_collision_events: int,
         total_ego_collisions: int,
@@ -42,7 +43,7 @@ class EpisodeLogger:
     ) -> None:
         ts = (timestamp or datetime.now()).isoformat(timespec="seconds")
         line = (
-            f"{ts}\t{episode}\t{reward:.6f}\t{steps}\t{end_reason}\t"
+            f"{ts}\t{episode}\t{reward:.6f}\t{steps}\t{end_reason}\t{route_id}\t"
             f"{total_ego_crashes}\t{total_collision_events}\t{total_ego_collisions}\t"
             f"{total_ego_teleports}\t{total_ego_emergency_stops}\n"
         )

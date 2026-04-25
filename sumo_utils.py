@@ -205,67 +205,164 @@ def get_tls_info(veh_id, max_dist=200.0):
 
 
 def get_state(veh_id):
-    """
-    Example traffic-aware normalized state.
-    """
     ego_speed = traci.vehicle.getSpeed(veh_id)
+    allowed_speed = traci.vehicle.getAllowedSpeed(veh_id)
+
     gap, leader_speed = get_leader_info(veh_id)
     rel_speed = ego_speed - leader_speed
+
+    time_headway = gap / max(ego_speed, 0.1)
+    time_headway = min(time_headway, 10.0)
+
     tls_dist, tls_red, tls_green, tls_yellow = get_tls_info(veh_id)
+
+    lane_id = traci.vehicle.getLaneID(veh_id)
+    lane_pos = traci.vehicle.getLanePosition(veh_id)
+    lane_len = traci.lane.getLength(lane_id)
+    lane_pos_norm = lane_pos / max(lane_len, 1.0)
+
+    route = traci.vehicle.getRoute(veh_id)
+    route_index = traci.vehicle.getRouteIndex(veh_id)
+    route_progress = route_index / max(len(route) - 1, 1)
 
     state = np.array([
         ego_speed / 20.0,
-        gap / 100.0,
+        allowed_speed / 20.0,
+        min(gap, 100.0) / 100.0,
         leader_speed / 20.0,
         rel_speed / 20.0,
+        time_headway / 10.0,
         tls_dist,
         tls_red,
         tls_green,
         tls_yellow,
+        lane_pos_norm,
+        route_progress,
     ], dtype=np.float32)
 
     return state
 
 
-def apply_action(veh_id, action: Action):
+def apply_action(veh_id, action):
     current_speed = traci.vehicle.getSpeed(veh_id)
+    allowed_speed = traci.vehicle.getAllowedSpeed(veh_id)
+
+    gap, leader_speed = get_leader_info(veh_id)
+    tls_dist, tls_red, tls_green, tls_yellow = get_tls_info(veh_id)
+
     delta_v = ACTION_TO_DELTA_V[action]
-    new_speed = max(0.0, current_speed + delta_v)
+    new_speed = current_speed + delta_v
+    new_speed = max(0.0, min(new_speed, allowed_speed))
+
+    # tls_dist normalized, max_dist=200:
+    # 0.020 = 4 m
+    # 0.015 = 3 m
+    # 0.010 = 2 m
+    # 0.0075 = 1.5 m
+
+    leader_stopped = leader_speed < 1.0
+
+    # Queue behavior: stop closer behind stopped car
+    if leader_stopped:
+        if gap > 5.0:
+            new_speed = max(new_speed, 1.5)
+        elif 2.5 <= gap <= 4.0:
+            new_speed = min(new_speed, 0.4)
+        elif gap < 2.5:
+            new_speed = 0.0
+
+    # Red light behavior: approach very close but do not cross
+    if tls_red > 0.5:
+        if tls_dist > 0.04 and gap > 6.0:        # farther than 8 m
+            new_speed = max(new_speed, 2.0)
+        elif 0.02 < tls_dist <= 0.04 and gap > 5.0:  # 4–8 m
+            new_speed = max(new_speed, 0.8)
+            new_speed = min(new_speed, 2.0)
+        elif 0.0075 <= tls_dist <= 0.02:         # 1.5–4 m
+            new_speed = min(new_speed, 0.3)
+        elif tls_dist < 0.0075:                  # too close
+            new_speed = 0.0
+
     traci.vehicle.setSpeed(veh_id, new_speed)
     return delta_v
 
 
 def compute_reward(veh_id, delta_v):
-    """
-    Safe-progress reward.
-    You will tune this later.
-    """
     ego_speed = traci.vehicle.getSpeed(veh_id)
+
     gap, leader_speed = get_leader_info(veh_id)
     rel_speed = ego_speed - leader_speed
+
     tls_dist, tls_red, tls_green, tls_yellow = get_tls_info(veh_id)
 
     reward = 0.0
 
-    # progress reward
+    # Progress
     reward += 0.1 * ego_speed
 
-    # too close to leader
-    if gap < 5:
-        reward -= 10.0
-    elif gap < 10:
-        reward -= 3.0
+    # Safety distance
+    if gap < 2.0:
+        reward -= 15.0
+    elif gap < 2.5:
+        reward -= 6.0
 
-    # closing in too fast
-    if rel_speed > 2.0 and gap < 15:
+    # Good close queue distance
+    if leader_speed < 1.0:
+        if ego_speed < 0.5 and gap > 8.0:
+            reward -= 12.0
+        elif ego_speed < 0.5 and gap > 5.0:
+            reward -= 6.0
+
+        if 2.5 <= gap <= 4.0 and ego_speed < 0.7:
+            reward += 6.0
+
+        if gap > 5.0 and 0.3 <= ego_speed <= 2.5:
+            reward += 2.0
+
+    # Approaching leader too fast
+    if rel_speed > 2.0 and gap < 10.0:
         reward -= 4.0
 
-    # approaching red light too fast
-    if tls_red > 0.5 and tls_dist < 0.25 and ego_speed > 5.0:
-        reward -= 5.0
-# approaching yellow light too fast
-    # comfort / smoothness penalty
-    reward -= 0.2 * abs(delta_v)
+    if rel_speed > 4.0 and gap < 6.0:
+        reward -= 8.0
+
+    # Red light behavior
+    if tls_red > 0.5:
+        # Too fast close to red
+        if tls_dist < 0.04 and ego_speed > 2.0:
+            reward -= 8.0
+        elif tls_dist < 0.10 and ego_speed > 5.0:
+            reward -= 4.0
+
+        # Bad: stopped too far from red
+        if ego_speed < 0.5 and tls_dist > 0.04 and gap > 6.0:
+            reward -= 12.0
+
+        # Good: creeping closer to red
+        if 0.02 < tls_dist <= 0.08 and 0.3 <= ego_speed <= 2.5 and gap > 5.0:
+            reward += 2.0
+
+        # Ideal stop zone: 1.5–4 m before TLS
+        if 0.0075 <= tls_dist <= 0.02 and ego_speed < 0.6:
+            reward += 8.0
+
+        # Too close / crossing risk
+        if tls_dist < 0.0075 and ego_speed > 0.1:
+            reward -= 15.0
+
+    # Yellow caution
+    if tls_yellow > 0.5 and tls_dist < 0.10 and ego_speed > 6.0:
+        reward -= 3.0
+
+    # Unnecessary stop
+    red_far = tls_red > 0.5 and tls_dist > 0.04
+    leader_far = gap > 8.0
+
+    if ego_speed < 0.2 and leader_far and (tls_red < 0.5 or red_far):
+        reward -= 6.0
+
+    # Smoothness
+    reward -= 0.05 * abs(delta_v)
 
     return reward
 

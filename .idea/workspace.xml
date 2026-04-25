@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="feat: update SUMO configuration and expand ego route definitions">
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dqn_ego_episode_100.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dqn_ego_episode_150.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dqn_ego_episode_200.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dqn_ego_episode_250.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dqn_ego_episode_50.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/train_20260330_145610.tsv" beforeDir="false" />
+    <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="check">
+      <change afterPath="$PROJECT_DIR$/gui_manual_step.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/sumo_log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.config.executor": "Run",
+    "Python.gui_manual_step.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -65,6 +62,7 @@
       <recent name="$PROJECT_DIR$/scenarios/bologna_joined" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/logs" />
       <recent name="$PROJECT_DIR$/scenarios/bologna" />
     </key>
   </component>
@@ -93,7 +91,7 @@
       <workItem from="1774957231185" duration="20000" />
       <workItem from="1776243650317" duration="11000" />
       <workItem from="1776596794381" duration="213000" />
-      <workItem from="1776864704131" duration="8394000" />
+      <workItem from="1776864704131" duration="15489000" />
     </task>
     <task id="LOCAL-00001" summary="feat: DQN + replay buffer + target net">
       <option name="closed" value="true" />
@@ -151,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776873564263</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: update SUMO configuration and expand ego route definitions">
+      <option name="closed" value="true" />
+      <created>1776873803538</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776873803538</updated>
+    </task>
+    <task id="LOCAL-00009" summary="check">
+      <option name="closed" value="true" />
+      <created>1776877649220</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776877649220</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,9 +188,22 @@
     <MESSAGE value="chore: add scenarios" />
     <MESSAGE value="chore: training in episodes" />
     <MESSAGE value="feat: update SUMO configuration and expand ego route definitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update SUMO configuration and expand ego route definitions" />
+    <MESSAGE value="check" />
+    <option name="LAST_COMMIT_MESSAGE" value="check" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>file://$PROJECT_DIR$/main.ipynb</url>
+          <line>102</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rl_traffic_agent$gui_manual_step.coverage" NAME="gui_manual_step Coverage Results" MODIFIED="1776877975402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rl_traffic_agent$main.coverage" NAME="main Coverage Results" MODIFIED="1772984544768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rl_traffic_agent$config.coverage" NAME="config Coverage Results" MODIFIED="1774957242512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

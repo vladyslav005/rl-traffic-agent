@@ -6,7 +6,7 @@ SUMO_CONFIG = "scenarios/bologna_joined/run.sumocfg"
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 NUM_EPISODES = 500
-MAX_STEPS_PER_EPISODE = 500
+MAX_STEPS_PER_EPISODE = 1500
 
 GAMMA = 0.99
 LR = 1e-3

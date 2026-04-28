@@ -67,6 +67,31 @@ EGO_ROUTE_POOL = [
     "ego_route_45",
     "ego_route_46",
 ]
+
+
+VALIDATION_ROUTES = [
+    "val_route_1",
+    "val_route_2",
+    "val_route_3",
+    "val_route_4",
+    "val_route_5",
+    "val_route_6",
+    "val_route_7",
+    "val_route_8",
+    "val_route_9",
+    "val_route_10",
+    "val_route_11",
+    "val_route_12",
+    "val_route_13",
+    "val_route_14",
+    "val_route_15",
+    "val_route_16",
+    "val_route_17",
+    "val_route_18",
+    "val_route_19",
+    "val_route_20",
+]
+
 # vehicle type should exist in your SUMO files, or use "passenger"
 EGO_TYPE_ID = "egoType"
 

@@ -18,10 +18,9 @@ class Action(IntEnum):
 
 
 ACTION_TO_DELTA_V = {
-    Action.STRONG_BRAKE: -4.0,
-    Action.SLOWER: -2.0,
+    Action.STRONG_BRAKE: -2.0,
+    Action.SLOWER: -1.0,
     Action.KEEP: 0.0,
-    Action.FASTER: 2.0,
-    Action.STRONG_FASTER: 4.0,
+    Action.FASTER: 1.0,
+    Action.STRONG_FASTER: 2.0,
 }
-

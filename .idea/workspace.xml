@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="chore: training in episodes">
-      <change afterPath="$PROJECT_DIR$/PPO.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PPO_main.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_one_ppo_episode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/watch_one_ppo_episode_slow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/watch_one_ppo_episode_slow_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rl-traffic-agent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rl-traffic-agent.iml" afterDir="false" />
+    <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="feat: update DQN architecture and enhance route handling in SUMO integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="50993e32-2066-4815-a8a6-cccc94f2ce10" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/gui_manual_step.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROJECT_OVERVIEW.md" beforeDir="false" afterPath="$PROJECT_DIR$/PROJECT_OVERVIEW.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
->>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/e1_output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/bologna_joined/tripinfos.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
->>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +18,10 @@
       <entry key="_/home/vladik/repositories/rl-traffic-agent" value="3AfRh2cH3a7FxoVJQ3ky3kKv1yE" />
     </persistenceIdMap>
   </component>
-  <component name="CopilotUserSelectedChatMode">
-    <option name="chatModeId" value="Agent" />
-  </component>
-  <component name="CopilotUserSelectedModel">
-    <selectedModels>
-      <entry key="agent-panel" value="GPT-5.2-Codex" />
-      <entry key="chat-panel" value="GPT-5.2-Codex" />
-    </selectedModels>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -67,33 +39,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-<<<<<<< HEAD
-    "Python._rewrite_ppo_notebook.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.run_one_ppo_episode.executor": "Run",
-    "Python.watch_one_ppo_episode.executor": "Run",
-    "Python.watch_one_ppo_episode_slow_v2.executor": "Run",
-    "Python.watch_ppo_checkpoints.executor": "Run",
-    "Python.watch_ppo_checkpoints_gui.executor": "Run",
-=======
     "Python.config.executor": "Run",
     "Python.gui_manual_step.executor": "Run",
     "Python.main.executor": "Run",
->>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
-<<<<<<< HEAD
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/serhiilavreniuk/repositories/rl-traffic-agent",
-    "node.js.selected.package.tslint": "(autodetect)",
-=======
     "git-widget-placeholder": "DQN",
-    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent",
->>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
+    "last_opened_file_path": "/home/vladik/repositories/rl-traffic-agent/sim_logs",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
@@ -101,12 +56,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sim_logs" />
+      <recent name="$PROJECT_DIR$/dqn_training" />
       <recent name="$PROJECT_DIR$/scenarios" />
       <recent name="$PROJECT_DIR$/scenarios/TAVF-Hamburg" />
       <recent name="$PROJECT_DIR$/scenarios/bologna_joined" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dqn_training_3" />
+      <recent name="$PROJECT_DIR$/dqn_training_2" />
+      <recent name="$PROJECT_DIR$/dqn_training_1" />
       <recent name="$PROJECT_DIR$/logs" />
       <recent name="$PROJECT_DIR$/scenarios/bologna" />
     </key>
@@ -137,6 +96,7 @@
       <workItem from="1776243650317" duration="11000" />
       <workItem from="1776596794381" duration="213000" />
       <workItem from="1776864704131" duration="15489000" />
+      <workItem from="1777142140285" duration="15886000" />
     </task>
     <task id="LOCAL-00001" summary="feat: DQN + replay buffer + target net">
       <option name="closed" value="true" />
@@ -210,7 +170,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776877649220</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: enhance SUMO integration with improved event tracking and configuration updates">
+      <option name="closed" value="true" />
+      <created>1777147723876</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777147723876</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: update DQN architecture and enhance route handling in SUMO integration">
+      <option name="closed" value="true" />
+      <created>1777154373145</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777154373145</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,29 +210,14 @@
     <MESSAGE value="chore: training in episodes" />
     <MESSAGE value="feat: update SUMO configuration and expand ego route definitions" />
     <MESSAGE value="check" />
-    <option name="LAST_COMMIT_MESSAGE" value="check" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/main.ipynb</url>
-          <line>102</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: enhance SUMO integration with improved event tracking and configuration updates" />
+    <MESSAGE value="feat: update DQN architecture and enhance route handling in SUMO integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update DQN architecture and enhance route handling in SUMO integration" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rl_traffic_agent$gui_manual_step.coverage" NAME="gui_manual_step Coverage Results" MODIFIED="1776877975402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rl_traffic_agent$main.coverage" NAME="main Coverage Results" MODIFIED="1772984544768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$watch_one_ppo_episode_slow_v2.coverage" NAME="watch_one_ppo_episode_slow_v2 Coverage Results" MODIFIED="1777388667797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rl_traffic_agent$config.coverage" NAME="config Coverage Results" MODIFIED="1774957242512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$watch_ppo_checkpoints_gui.coverage" NAME="watch_ppo_checkpoints_gui Coverage Results" MODIFIED="1777387527871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$_rewrite_ppo_notebook.coverage" NAME="_rewrite_ppo_notebook Coverage Results" MODIFIED="1777387756686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$watch_ppo_checkpoints.coverage" NAME="watch_ppo_checkpoints Coverage Results" MODIFIED="1777387145335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$watch_one_ppo_episode.coverage" NAME="watch_one_ppo_episode Coverage Results" MODIFIED="1777387827805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rl_traffic_agent$run_one_ppo_episode.coverage" NAME="run_one_ppo_episode Coverage Results" MODIFIED="1777389784624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

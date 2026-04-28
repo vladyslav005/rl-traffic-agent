@@ -1,0 +1,418 @@
+[2026-04-25T22:58:34.925268+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:58:35.171512+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=242.00, stage=move.
+[2026-04-25T22:58:36.169036+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T22:58:38.097532+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:58:38.819755+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T22:58:39.370808+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T22:58:40.703726+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_204', lane=':b4_3_0', gap=-1.00, time=689.00, stage=move.
+[2026-04-25T22:58:40.714846+01:00] Warning: Vehicle 'Pertini_20_206'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=691.00, stage=move.
+[2026-04-25T22:58:40.725232+01:00] Warning: Vehicle 'Pertini_20_215'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=693.00, stage=move.
+[2026-04-25T22:58:40.735600+01:00] Warning: Vehicle 'Pertini_20_218'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=695.00, stage=move.
+[2026-04-25T22:58:40.748650+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_223', lane=':b4_3_0', gap=-1.00, time=697.00, stage=move.
+[2026-04-25T22:58:40.754954+01:00] Warning: Vehicle 'Pertini_20_227'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=698.00, stage=move.
+[2026-04-25T22:58:40.778143+01:00] Warning: Vehicle 'Pertini_20_240'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=702.00, stage=move.
+[2026-04-25T22:58:40.788461+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_245', lane=':b4_3_0', gap=-1.00, time=704.00, stage=move.
+[2026-04-25T22:58:40.805204+01:00] Warning: Vehicle 'Pertini_20_250'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=707.00, stage=move.
+[2026-04-25T22:58:40.816369+01:00] Warning: Vehicle 'Pertini_20_256'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=709.00, stage=move.
+[2026-04-25T22:58:42.324430+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:58:42.548286+01:00] Warning: Vehicle 'Pertini_20_76'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T22:58:44.566568+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:58:46.120477+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:58:47.253844+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T22:58:49.116868+01:00] Warning: Vehicle 'bus_140_600'; junction collision with vehicle 'Turati_10_15', lane=':a27_1_0', gap=-1.00, time=644.00, stage=move.
+[2026-04-25T22:58:49.561026+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_210', lane=':b4_3_0', gap=-1.00, time=690.00, stage=move.
+[2026-04-25T22:58:49.582220+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_215', lane=':b4_3_0', gap=-1.00, time=692.00, stage=move.
+[2026-04-25T22:58:49.594087+01:00] Warning: Vehicle 'Pertini_20_218'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=693.00, stage=move.
+[2026-04-25T22:58:49.618728+01:00] Warning: Vehicle 'Pertini_20_225'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=695.00, stage=move.
+[2026-04-25T22:58:49.641728+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_230', lane=':b4_3_0', gap=-1.00, time=697.00, stage=move.
+[2026-04-25T22:58:49.652954+01:00] Warning: Vehicle 'Pertini_20_233'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=698.00, stage=move.
+[2026-04-25T22:58:49.675574+01:00] Warning: Vehicle 'Pertini_20_240'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=700.00, stage=move.
+[2026-04-25T22:58:49.699012+01:00] Warning: Vehicle 'Pertini_20_242'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=702.00, stage=move.
+[2026-04-25T22:58:49.720279+01:00] Warning: Vehicle 'bus_12_600'; junction collision with vehicle 'Pertini_20_249', lane=':b4_3_0', gap=-1.00, time=704.00, stage=move.
+[2026-04-25T22:58:49.754454+01:00] Warning: Vehicle 'Pertini_20_255'; junction collision with vehicle 'bus_12_600', lane=':b4_9_1', gap=-1.00, time=707.00, stage=move.
+[2026-04-25T22:58:49.978782+01:00] Warning: Vehicle 'Turati_11_16'; junction collision with vehicle 'bus_210_600', lane=':a27_10_0', gap=-1.00, time=724.00, stage=move.
+[2026-04-25T22:58:52.248036+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:58:55.287473+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:58:56.734732+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:58:57.505110+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T22:59:00.791215+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:00.903541+01:00] Warning: Vehicle 'bus_9_0'; junction collision with vehicle 'Silvani_11_8', lane=':b9_16_0', gap=-1.00, time=202.00, stage=move.
+[2026-04-25T22:59:01.061010+01:00] Warning: Vehicle 'Pertini_20_39'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=223.00, stage=move.
+[2026-04-25T22:59:03.957202+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:05.898126+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T22:59:08.570030+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:09.680441+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:59:10.435946+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T22:59:12.377779+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:12.727108+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=236.00, stage=move.
+[2026-04-25T22:59:12.742340+01:00] Warning: Vehicle 'Pertini_20_73'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T22:59:14.377487+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T22:59:15.855891+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=103.00, stage=move.
+[2026-04-25T22:59:16.314442+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:17.159574+01:00] Warning: Vehicle 'Prati_Capraia_30_42'; junction collision with vehicle 'Pertini_20_85', lane=':b4_3_0', gap=-1.00, time=313.00, stage=move.
+[2026-04-25T22:59:19.817920+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:20.946492+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T22:59:23.071886+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:23.224563+01:00] Warning: Vehicle 'Silvani_11_9'; side collision with vehicle 'bus_8_50', lane=':b12_3_0', gap=-1.00, time=210.00, stage=laneChange.
+[2026-04-25T22:59:23.364132+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=230.00, stage=move.
+[2026-04-25T22:59:25.883188+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:32.204366+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:36.080761+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:38.888541+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:40.024986+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:59:43.795733+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=103.00, stage=move.
+[2026-04-25T22:59:44.236019+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:45.108611+01:00] Warning: Vehicle 'Pepoli_11_8'; junction collision with vehicle 'bus_9_0', lane=':b9_9_0', gap=-1.00, time=308.00, stage=move.
+[2026-04-25T22:59:47.027537+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:49.251065+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T22:59:50.655119+01:00] Warning: Vehicle 'bus_6_60'; junction collision with vehicle 'Pertini_73_131', lane=':b18_5_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:59:53.103078+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:56.302280+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T22:59:57.906192+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T22:59:58.037856+01:00] Warning: Vehicle 'Pertini_20_120'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=369.00, stage=move.
+[2026-04-25T23:00:00.015811+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=104.00, stage=move.
+[2026-04-25T23:00:04.438400+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:05.802961+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:00:06.692861+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:00:08.119722+01:00] Warning: Vehicle 'Pertini_20_158'; junction collision with vehicle 'Prati_Capraia_30_114', lane=':b4_9_1', gap=-1.00, time=618.00, stage=move.
+[2026-04-25T23:00:10.553225+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:11.483515+01:00] Warning: Vehicle 'Prati_Capraia_30_42'; junction collision with vehicle 'Pertini_20_91', lane=':b4_3_0', gap=-1.00, time=312.00, stage=move.
+[2026-04-25T23:00:11.915256+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:00:15.673899+01:00] Warning: Vehicle 'ego'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:17.513310+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:17.834638+01:00] Warning: Vehicle 'Pertini_20_48'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=234.00, stage=move.
+[2026-04-25T23:00:20.268945+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:20.583460+01:00] Warning: Vehicle 'Pertini_20_37'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=231.00, stage=move.
+[2026-04-25T23:00:24.501361+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:29.503552+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:29.898273+01:00] Warning: Vehicle 'Pertini_20_85'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=242.00, stage=move.
+[2026-04-25T23:00:32.721295+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:33.135727+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=244.00, stage=move.
+[2026-04-25T23:00:36.396452+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:38.546591+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:38.946516+01:00] Warning: Vehicle 'Pertini_20_61'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=245.00, stage=move.
+[2026-04-25T23:00:41.124008+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:42.307873+01:00] Warning: Vehicle 'bus_6_60'; junction collision with vehicle 'Pertini_73_131', lane=':b18_5_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:00:43.100106+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:00:45.309303+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:46.201762+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=315.00, stage=move.
+[2026-04-25T23:00:46.467993+01:00] Warning: Vehicle 'bus_6_60'; junction collision with vehicle 'Pertini_73_131', lane=':b18_5_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:00:48.357541+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:50.828119+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:00:51.201730+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=232.00, stage=move.
+[2026-04-25T23:00:51.266853+01:00] Warning: Vehicle 'Pertini_20_86'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=241.00, stage=move.
+[2026-04-25T23:00:56.260335+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:00:56.753917+01:00] Warning: Vehicle 'Pertini_20_78'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T23:01:00.528053+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:03.098694+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:05.757040+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:11.046424+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=105.00, stage=move.
+[2026-04-25T23:01:11.451751+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:11.825333+01:00] Warning: Vehicle 'Pertini_20_45'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=233.00, stage=move.
+[2026-04-25T23:01:11.838263+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=235.00, stage=move.
+[2026-04-25T23:01:14.317049+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:14.708706+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=242.00, stage=move.
+[2026-04-25T23:01:15.505782+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:01:17.629518+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:19.637099+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:01:22.121113+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:22.395826+01:00] Warning: Vehicle 'Pertini_20_48'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=226.00, stage=move.
+[2026-04-25T23:01:23.024430+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=315.00, stage=move.
+[2026-04-25T23:01:23.370069+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:01:24.229869+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:01:26.120354+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:28.207030+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:29.402965+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:01:31.851300+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:34.107137+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:34.482587+01:00] Warning: Vehicle 'Prati_Capraia_30_33'; junction collision with vehicle 'Pertini_20_42', lane=':b4_3_0', gap=-1.00, time=231.00, stage=move.
+[2026-04-25T23:01:35.349873+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:01:39.105236+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:41.252223+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:42.606735+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:01:46.548188+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:01:48.232939+01:00] Warning: Vehicle 'Pertini_20_14'; junction collision with vehicle 'Prati_Capraia_30_6', lane=':b4_9_1', gap=-1.00, time=88.00, stage=move.
+[2026-04-25T23:01:48.777051+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:50.090946+01:00] Warning: Vehicle 'Pertini_20_109'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=368.00, stage=move.
+[2026-04-25T23:01:50.918383+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:01:53.322926+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:53.501336+01:00] Warning: Vehicle 'Silvani_11_9'; side collision with vehicle 'bus_8_50', lane=':b12_3_0', gap=-1.00, time=210.00, stage=laneChange.
+[2026-04-25T23:01:57.765094+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:01:59.820112+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:02:02.869774+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:06.304818+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:02:06.802378+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:09.150500+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:11.139844+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:12.569558+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T23:02:13.369898+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:02:18.995245+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:21.336248+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:24.016337+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:26.057204+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:02:29.882887+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:33.541946+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:33.923479+01:00] Warning: Vehicle 'Pertini_20_76'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=236.00, stage=move.
+[2026-04-25T23:02:36.458055+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:36.868602+01:00] Warning: Vehicle 'Pertini_20_78'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=243.00, stage=move.
+[2026-04-25T23:02:38.396269+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:02:38.974144+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:39.331132+01:00] Warning: Vehicle 'Pertini_20_45'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=232.00, stage=move.
+[2026-04-25T23:02:39.917290+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=315.00, stage=move.
+[2026-04-25T23:02:43.703991+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:45.276105+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:02:45.821024+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:46.139161+01:00] Warning: Vehicle 'Pertini_20_63'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=228.00, stage=move.
+[2026-04-25T23:02:49.047443+01:00] Warning: Vehicle 'Pertini_20_9'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=72.00, stage=move.
+[2026-04-25T23:02:49.055436+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=74.00, stage=move.
+[2026-04-25T23:02:51.154842+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:02:55.621042+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:02:58.098527+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:00.258133+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:03:02.101607+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_7', lane=':b4_3_0', gap=-1.00, time=71.00, stage=move.
+[2026-04-25T23:03:02.112412+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=74.00, stage=move.
+[2026-04-25T23:03:02.148294+01:00] Warning: Vehicle 'Pertini_20_12'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:03:02.171416+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_15', lane=':b4_3_0', gap=-1.00, time=90.00, stage=move.
+[2026-04-25T23:03:02.175275+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:03:04.037060+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:05.457023+01:00] Warning: Vehicle 'Pertini_20_7'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=70.00, stage=move.
+[2026-04-25T23:03:05.464304+01:00] Warning: Vehicle 'Pertini_20_9'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=72.00, stage=move.
+[2026-04-25T23:03:05.511128+01:00] Warning: Vehicle 'Pertini_20_12'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:03:08.750423+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:03:09.334873+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:13.344977+01:00] Warning: Vehicle 'Pertini_20_9'; junction collision with vehicle 'Prati_Capraia_30_6', lane=':b4_9_1', gap=-1.00, time=72.00, stage=move.
+[2026-04-25T23:03:13.394762+01:00] Warning: Vehicle 'Pertini_20_12'; junction collision with vehicle 'Prati_Capraia_30_6', lane=':b4_9_1', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:03:14.043461+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:18.224204+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:22.567677+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:24.692701+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:03:25.469329+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:27.992666+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:30.249200+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:34.256245+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:36.190308+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:37.372617+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:03:38.175516+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:03:42.450376+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=103.00, stage=move.
+[2026-04-25T23:03:42.893176+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:43.815176+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=315.00, stage=move.
+[2026-04-25T23:03:46.026995+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:03:47.962498+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:48.836161+01:00] Warning: Vehicle 'Pertini_20_91'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=314.00, stage=move.
+[2026-04-25T23:03:49.115532+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T23:03:49.915577+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:03:51.796672+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_1', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:03:52.262795+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:53.760489+01:00] Warning: Vehicle 'Prati_Capraia_50_15'; junction collision with vehicle 'Pertini_20_15', lane=':b4_3_0', gap=-1.00, time=90.00, stage=move.
+[2026-04-25T23:03:57.521317+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:03:57.800028+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=227.00, stage=move.
+[2026-04-25T23:04:03.004241+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:03.353000+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=232.00, stage=move.
+[2026-04-25T23:04:03.439906+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=244.00, stage=move.
+[2026-04-25T23:04:05.086230+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:04:08.871241+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:09.136488+01:00] Warning: Vehicle 'Pertini_20_42'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=223.00, stage=move.
+[2026-04-25T23:04:11.426539+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:13.397599+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:14.657754+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:04:15.472479+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:04:18.217218+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:20.807774+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:21.212451+01:00] Warning: Vehicle 'Pertini_20_53'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=243.00, stage=move.
+[2026-04-25T23:04:23.137134+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:23.536812+01:00] Warning: Vehicle 'Pertini_20_85'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=242.00, stage=move.
+[2026-04-25T23:04:25.418623+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:26.907526+01:00] Warning: Vehicle 'Pertini_20_9'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=72.00, stage=move.
+[2026-04-25T23:04:26.916939+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=74.00, stage=move.
+[2026-04-25T23:04:26.957018+01:00] Warning: Vehicle 'Pertini_20_12'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:04:26.996075+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_17', lane=':b4_3_0', gap=-1.00, time=92.00, stage=move.
+[2026-04-25T23:04:28.277728+01:00] Warning: Vehicle 'Pertini_20_9'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=72.00, stage=move.
+[2026-04-25T23:04:28.286273+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=74.00, stage=move.
+[2026-04-25T23:04:28.317745+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_10', lane=':b4_3_0', gap=-1.00, time=83.00, stage=move.
+[2026-04-25T23:04:28.321534+01:00] Warning: Vehicle 'Pertini_20_12'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:04:28.333629+01:00] Warning: Vehicle 'Pertini_20_14'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=87.00, stage=move.
+[2026-04-25T23:04:28.349976+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_15', lane=':b4_3_0', gap=-1.00, time=91.00, stage=move.
+[2026-04-25T23:04:28.354301+01:00] Warning: Vehicle 'Pertini_20_17'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=92.00, stage=move.
+[2026-04-25T23:04:30.237842+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:30.632468+01:00] Warning: Vehicle 'Pertini_20_73'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=242.00, stage=move.
+[2026-04-25T23:04:31.433112+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:04:33.607603+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=105.00, stage=move.
+[2026-04-25T23:04:34.029184+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:36.202270+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:36.575382+01:00] Warning: Vehicle 'Pertini_20_64'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=239.00, stage=move.
+[2026-04-25T23:04:36.587721+01:00] Warning: Vehicle 'Pertini_20_72'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=241.00, stage=move.
+[2026-04-25T23:04:37.379284+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:04:38.209514+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:04:45.216038+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:48.435319+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:48.812556+01:00] Warning: Vehicle 'Prati_Capraia_30_33'; junction collision with vehicle 'Pertini_20_35', lane=':b4_3_0', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T23:04:51.008389+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:52.210097+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:04:54.088125+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:04:54.445133+01:00] Warning: Vehicle 'Prati_Capraia_30_33'; junction collision with vehicle 'Pertini_20_35', lane=':b4_3_0', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T23:04:58.885496+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:04:59.285627+01:00] Warning: Vehicle 'Pertini_20_74'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T23:05:03.283960+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:06.675875+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:10.847182+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:15.540688+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:15.884563+01:00] Warning: Vehicle 'Pertini_20_54'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=235.00, stage=move.
+[2026-04-25T23:05:16.939260+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T23:05:19.228816+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:20.344735+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=317.00, stage=move.
+[2026-04-25T23:05:20.732565+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:05:22.851059+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:26.456444+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:26.852425+01:00] Warning: Vehicle 'Pertini_20_53'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=240.00, stage=move.
+[2026-04-25T23:05:28.836679+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:30.569925+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=105.00, stage=move.
+[2026-04-25T23:05:30.977799+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:36.090593+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:05:36.331681+01:00] Warning: Vehicle 'Silvani_11_9'; side collision with vehicle 'bus_8_50', lane=':b12_3_0', gap=-1.00, time=211.00, stage=laneChange.
+[2026-04-25T23:05:39.446500+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:40.371286+01:00] Warning: Vehicle 'Prati_Capraia_30_42'; junction collision with vehicle 'Pertini_20_91', lane=':b4_3_0', gap=-1.00, time=312.00, stage=move.
+[2026-04-25T23:05:44.011966+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:46.957235+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:49.244385+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:51.518973+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:53.814445+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:57.665436+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:05:58.020316+01:00] Warning: Vehicle 'Pertini_20_37'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=233.00, stage=move.
+[2026-04-25T23:05:58.033885+01:00] Warning: Vehicle 'Pertini_20_48'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=235.00, stage=move.
+[2026-04-25T23:06:00.533744+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:01.800351+01:00] Warning: Vehicle 'bus_6_60'; junction collision with vehicle 'Pertini_73_131', lane=':b18_5_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:06:04.024141+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=103.00, stage=move.
+[2026-04-25T23:06:04.444744+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:04.815367+01:00] Warning: Vehicle 'Pertini_20_74'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=238.00, stage=move.
+[2026-04-25T23:06:04.828894+01:00] Warning: Vehicle 'Pertini_20_85'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=240.00, stage=move.
+[2026-04-25T23:06:05.670548+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:06:05.794074+01:00] Warning: Vehicle 'Pertini_20_107'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=369.00, stage=move.
+[2026-04-25T23:06:06.506002+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:06:08.307838+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_7', lane=':b4_3_0', gap=-1.00, time=71.00, stage=move.
+[2026-04-25T23:06:08.322652+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'bus_12_0', lane=':b4_9_1', gap=-1.00, time=74.00, stage=move.
+[2026-04-25T23:06:08.362916+01:00] Warning: Vehicle 'bus_12_0'; junction collision with vehicle 'Pertini_20_12', lane=':b4_3_0', gap=-1.00, time=84.00, stage=move.
+[2026-04-25T23:06:11.982134+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:14.005747+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:15.310775+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:06:18.159681+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:18.558935+01:00] Warning: Vehicle 'Pertini_20_55'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=243.00, stage=move.
+[2026-04-25T23:06:21.628375+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:21.914440+01:00] Warning: Vehicle 'Prati_Capraia_30_33'; junction collision with vehicle 'Pertini_20_42', lane=':b4_3_0', gap=-1.00, time=221.00, stage=move.
+[2026-04-25T23:06:24.599942+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:24.886857+01:00] Warning: Vehicle 'Pertini_20_45'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=226.00, stage=move.
+[2026-04-25T23:06:24.935345+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=233.00, stage=move.
+[2026-04-25T23:06:25.496904+01:00] Warning: Vehicle 'Pertini_20_90'; junction collision with vehicle 'Prati_Capraia_30_42', lane=':b4_9_1', gap=-1.00, time=315.00, stage=move.
+[2026-04-25T23:06:27.594119+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:27.930980+01:00] Warning: Vehicle 'Pertini_20_37'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=232.00, stage=move.
+[2026-04-25T23:06:32.320174+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:32.690448+01:00] Warning: Vehicle 'Pertini_20_85'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=241.00, stage=move.
+[2026-04-25T23:06:34.954862+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:36.847628+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:40.108404+01:00] Warning: Vehicle 'Pertini_20_11'; junction collision with vehicle 'Prati_Capraia_30_6', lane=':b4_9_1', gap=-1.00, time=75.00, stage=move.
+[2026-04-25T23:06:40.225698+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_30_6', lane=':b4_9_0', gap=-1.00, time=104.00, stage=move.
+[2026-04-25T23:06:43.513327+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:43.975475+01:00] Warning: Vehicle 'Pertini_20_69'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=244.00, stage=move.
+[2026-04-25T23:06:44.472578+01:00] Warning: Vehicle 'Prati_Capraia_30_42'; junction collision with vehicle 'Pertini_20_72', lane=':b4_3_0', gap=-1.00, time=313.00, stage=move.
+[2026-04-25T23:06:44.774781+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:06:48.455349+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=104.00, stage=move.
+[2026-04-25T23:06:48.910416+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:51.047040+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:06:52.314725+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:06:53.320342+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:06:55.827263+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:06:57.454608+01:00] Warning: Vehicle 'Prati_Capraia_50_15'; junction collision with vehicle 'Pertini_20_15', lane=':b4_3_0', gap=-1.00, time=90.00, stage=move.
+[2026-04-25T23:06:57.949820+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:00.575902+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:01.781343+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:07:02.641273+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
+[2026-04-25T23:07:06.530480+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:08.676057+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:10.721090+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:11.129860+01:00] Warning: Vehicle 'Pertini_20_73'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=240.00, stage=move.
+[2026-04-25T23:07:13.377660+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:15.805263+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:17.166915+01:00] Warning: Vehicle 'bus_6_60'; junction collision with vehicle 'Pertini_73_131', lane=':b18_5_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:07:20.961038+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:23.779941+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:24.994686+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=352.00, stage=move.
+[2026-04-25T23:07:29.736759+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:31.874075+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:34.139693+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:37.199779+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:40.770411+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:42.169588+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:07:44.211171+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:45.421973+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-04-25T23:07:46.256550+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-04-25T23:07:48.430135+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:50.443538+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:52.494554+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:07:54.786229+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:56.410882+01:00] Warning: Vehicle 'Pertini_20_22'; junction collision with vehicle 'Prati_Capraia_50_15', lane=':b4_9_0', gap=-1.00, time=103.00, stage=move.
+[2026-04-25T23:07:56.853991+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:07:57.252349+01:00] Warning: Vehicle 'Pertini_20_73'; junction collision with vehicle 'Prati_Capraia_30_33', lane=':b4_9_1', gap=-1.00, time=236.00, stage=move.
+[2026-04-25T23:07:59.231591+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-04-25T23:08:01.266136+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-04-25T23:08:03.760701+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+Traceback (most recent call last):
+  File "/home/vladik/repositories/rl-traffic-agent/train.py", line 58, in <module>
+    ep_reward, ep_steps, global_step, end_reason = run_episode(
+                                                   ^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/utils.py", line 169, in run_episode
+    if is_abnormal_disappearance():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/sumo_utils.py", line 330, in is_abnormal_disappearance
+    
+  File "/home/vladik/repositories/rl-traffic-agent/sumo_utils.py", line 174, in ego_exists
+    return EGO_ID in traci.vehicle.getIDList()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/domain.py", line 176, in getIDList
+    return self._getUniversal(tc.TRACI_ID_LIST)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/domain.py", line 152, in _getUniversal
+    return _parse(self._retValFunc, varID, self._getCmd(varID, objectID, format, *values))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/domain.py", line 62, in _parse
+    return data.readStringList()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/storage.py", line 82, in readStringList
+    return tuple([self.readString() for i in range(n)])
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/storage.py", line 68, in readString
+    length = self.read("!i")[0]
+             ^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/storage.py", line 38, in read
+    return struct.unpack(format, self._content[oldPos:self._pos])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[2026-04-25T23:08:07.142734+01:00] Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
+[2026-04-25T23:08:07.142794+01:00] Quitting (on error).
+Traceback (most recent call last):
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/main.py", line 97, in connect
+    return connection.Connection(host, port, proc, traceFile, traceGetters, label)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/connection.py", line 83, in __init__
+    self._socket.connect((host, port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vladik/repositories/rl-traffic-agent/train.py", line 58, in <module>
+    ep_reward, ep_steps, global_step, end_reason = run_episode(
+                                                   ^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/utils.py", line 81, in run_episode
+    reset_sumo()
+  File "/home/vladik/repositories/rl-traffic-agent/sumo_utils.py", line 70, in reset_sumo
+    start_sumo(use_gui=use_gui)
+  File "/home/vladik/repositories/rl-traffic-agent/sumo_utils.py", line 40, in start_sumo
+    traci.start(cmd)
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/main.py", line 147, in start
+    result = init(sumoPort, numRetries, "localhost", label, sumoProcess, doSwitch, traceFile, traceGetters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/main.py", line 116, in init
+    con = connect(port, numRetries, host, proc, 1, traceFile, traceGetters, label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vladik/repositories/rl-traffic-agent/.venv/lib/python3.12/site-packages/traci/main.py", line 105, in connect
+    time.sleep(waitBetweenRetries)
+KeyboardInterrupt

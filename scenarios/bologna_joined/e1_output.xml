@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <!-- generated on 2026-04-28T17:23:06.422185+01:00 by Eclipse SUMO GUI 1.26.0
+=======
+<!-- generated on 2026-04-22T19:39:45.383129+01:00 by Eclipse SUMO GUI 1.26.0
+>>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -14,12 +18,26 @@
         <save-state.prefix value="scenarios/bologna_joined/state"/>
     </output>
 
+<<<<<<< HEAD
     <report>
         <log value="scenarios/bologna_joined/sumo_log.txt"/>
+=======
+    <processing>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <collision.mingap-factor value="0"/>
+    </processing>
+
+    <report>
+        <aggregate-warnings value="5"/>
+        <log value="sim_logs/sumo.log"/>
+        <log.timestamps value="true"/>
+>>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
         <no-step-log value="true"/>
     </report>
 
     <traci_server>
+<<<<<<< HEAD
         <remote-port value="59865"/>
     </traci_server>
 
@@ -29,4 +47,9 @@
         <delay value="500"/>
     </gui_only>
 
+=======
+        <remote-port value="40081"/>
+    </traci_server>
+
+>>>>>>> 167e2d9661565b0c4af5b5c5aea2eca7a892f3d2
 </sumoConfiguration>

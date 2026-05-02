@@ -48,7 +48,7 @@ from sumo_utils import (
 # =============================================================================
 BASE_DIR = Path(__file__).resolve().parent
 print(BASE_DIR)
-CHECKPOINT_PATH = str(BASE_DIR / "ppo_training" / "ppo_ego_episode_1000.pth")
+CHECKPOINT_PATH = str(BASE_DIR / "ppo_training" / "ppo_ego_episode_50.pth")
 
 # Можно указать конкретный маршрут, например "ego_route_2".
 # Если поставить None, маршрут выберется из EGO_ROUTE_POOL по ROUTE_INDEX.

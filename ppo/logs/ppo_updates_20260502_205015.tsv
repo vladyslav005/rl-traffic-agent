@@ -1,0 +1,1 @@
+timestamp	update_idx	episode_start	episode_end	episodes_in_update	rollout_steps	mean_reward	mean_steps	arrived	ego_crash	abnormal_end	timeout	spawn_failed	policy_loss	value_loss	entropy	loss	approx_kl	clip_fraction	explained_variance	epochs_ran	samples

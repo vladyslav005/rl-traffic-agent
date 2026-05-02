@@ -1,0 +1,23 @@
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+***Starting server on port 50074 ***
+Loading net-file from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (20ms).
+Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
+Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
+Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (1ms).
+Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
+Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
+Loading done.
+Simulation started with time: 0.00.
+Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
+Quitting (on error).
+Simulation ended at time: 216.00.
+Performance:
+ Duration: 184.68s
+ TraCI-Duration: 121.73s
+ Real time factor: 1.16962
+ UPS: 326.593602
+Vehicles:
+ Inserted: 644 (Loaded: 14062)
+ Running: 539
+ Waiting: 371

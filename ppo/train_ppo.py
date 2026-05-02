@@ -52,7 +52,7 @@ CHECKPOINT_FREQ = 50 # save model every N episodes
 SEED = 42
 MAX_CONSECUTIVE_SPAWN_FAILURES = 10
 
-NUM_EPISODES = 1000
+NUM_EPISODES = 500
 # RESUME_CHECKPOINT = "ppo_training/ppo_ego_episode_500.pth"
 RESUME_CHECKPOINT = None
 

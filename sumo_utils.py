@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 import os
+from typing import Optional
 
 import numpy as np
 import traci
@@ -11,14 +14,22 @@ CURRENT_USE_GUI = False
 CURRENT_SUMO_CONFIG: str = SUMO_CONFIG
 CURRENT_TRAFFIC_SCALE: float = 1.0
 
+# Reward shaping note:
+# Rewards here are computed *per simulation step*.
+# If any positive per-step bonus is too large, the agent can exploit it by
+# waiting/creeping ("reward farming") for hundreds of steps. Therefore:
+# - per-step shaping bonuses must be small
+# - the main positive signal should come from *real forward progress*
+_LAST_DISTANCE_BY_VEH_ID: dict[str, float] = {}
+
 
 def start_sumo(
                use_gui=False,
                log_dir="sim_logs",
                quiet_console=False,
                hide_warnings=False,
-               sumo_config: str | None = None,
-               traffic_scale: float | None = None,
+               sumo_config: Optional[str] = None,
+               traffic_scale: Optional[float] = None,
 ):
     global CURRENT_USE_GUI, CURRENT_SUMO_CONFIG, CURRENT_TRAFFIC_SCALE
     CURRENT_USE_GUI = use_gui
@@ -64,7 +75,7 @@ def _traci_is_connected() -> bool:
         return False
 
 
-def reset_sumo(use_gui=None, *, sumo_config: str | None = None, traffic_scale: float | None = None):
+def reset_sumo(use_gui=None, *, sumo_config: Optional[str] = None, traffic_scale: Optional[float] = None):
     """Reset strategy: close current simulation and restart.
 
     Args:
@@ -85,6 +96,10 @@ def reset_sumo(use_gui=None, *, sumo_config: str | None = None, traffic_scale: f
             traci.close()
         except Exception:
             pass
+
+    # TraCI is restarted, so per-vehicle cached values (e.g., distance deltas)
+    # must be reset as well.
+    _LAST_DISTANCE_BY_VEH_ID.clear()
 
     start_sumo(use_gui=use_gui, sumo_config=sumo_config, traffic_scale=traffic_scale)
 
@@ -153,6 +168,12 @@ def spawn_ego(route_id, wait_steps=30):
                     traci.gui.trackVehicle("View #0", EGO_ID)
             except Exception:
                 pass
+
+            # Initialize progress-tracking baseline for reward shaping.
+            try:
+                _LAST_DISTANCE_BY_VEH_ID[EGO_ID] = float(traci.vehicle.getDistance(EGO_ID))
+            except Exception:
+                _LAST_DISTANCE_BY_VEH_ID.pop(EGO_ID, None)
 
             return True, "spawned"
 
@@ -316,73 +337,74 @@ def compute_reward(veh_id, delta_v):
 
     reward = 0.0
 
-    # Progress
-    reward += 0.1 * ego_speed
+    # --- Time / efficiency ---
+    reward -= 0.01  # time penalty
+
+    # --- Progress (actual distance traveled since previous step) ---
+    dist_now = float(traci.vehicle.getDistance(veh_id))
+    dist_prev = float(_LAST_DISTANCE_BY_VEH_ID.get(veh_id, dist_now))
+    delta_dist = max(0.0, dist_now - dist_prev)
+    _LAST_DISTANCE_BY_VEH_ID[veh_id] = dist_now
+
+    reward += min(0.1 * delta_dist, 0.8)  # progress
 
     # Safety distance
     if gap < 2.0:
-        reward -= 15.0
+        reward -= 3.0
     elif gap < 2.5:
-        reward -= 6.0
+        reward -= 1.5
 
-    # Good close queue distance
+    # Queue behavior shaping (small per-step values)
     if leader_speed < 1.0:
         if ego_speed < 0.5 and gap > 8.0:
-            reward -= 12.0
+            reward -= 2.0
         elif ego_speed < 0.5 and gap > 5.0:
-            reward -= 6.0
+            reward -= 1.0
 
         if 2.5 <= gap <= 4.0 and ego_speed < 0.7:
-            reward += 6.0
-
-        if gap > 5.0 and 0.3 <= ego_speed <= 2.5:
-            reward += 2.0
+            reward += 0.2
 
     # Approaching leader too fast
     if rel_speed > 2.0 and gap < 10.0:
-        reward -= 4.0
+        reward -= 1.0
 
     if rel_speed > 4.0 and gap < 6.0:
-        reward -= 8.0
+        reward -= 2.0
 
     # Red light behavior
     if tls_red > 0.5:
-        # Too fast close to red
         if tls_dist < 0.04 and ego_speed > 2.0:
-            reward -= 8.0
+            reward -= 2.0
         elif tls_dist < 0.10 and ego_speed > 5.0:
-            reward -= 4.0
+            reward -= 1.0
 
-        # Bad: stopped too far from red
         if ego_speed < 0.5 and tls_dist > 0.04 and gap > 6.0:
-            reward -= 12.0
+            reward -= 2.0
 
-        # Good: creeping closer to red
         if 0.02 < tls_dist <= 0.08 and 0.3 <= ego_speed <= 2.5 and gap > 5.0:
-            reward += 2.0
+            reward += 0.1
 
-        # Ideal stop zone: 1.5–4 m before TLS
         if 0.0075 <= tls_dist <= 0.02 and ego_speed < 0.6:
-            reward += 8.0
+            reward += 0.2
 
-        # Too close / crossing risk
         if tls_dist < 0.0075 and ego_speed > 0.1:
-            reward -= 15.0
+            reward -= 3.0
 
     # Yellow caution
     if tls_yellow > 0.5 and tls_dist < 0.10 and ego_speed > 6.0:
-        reward -= 3.0
+        reward -= 1.0
 
     # Unnecessary stop
     red_far = tls_red > 0.5 and tls_dist > 0.04
     leader_far = gap > 8.0
 
     if ego_speed < 0.2 and leader_far and (tls_red < 0.5 or red_far):
-        reward -= 6.0
+        reward -= 1.0
 
     # Smoothness
-    reward -= 0.05 * abs(delta_v)
+    reward -= 0.03 * abs(delta_v)
 
+    reward = float(np.clip(reward, -3.0, 1.0))
     return reward
 
 

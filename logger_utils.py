@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Iterable, Optional
 
 
 @dataclass
@@ -97,12 +97,33 @@ class ValidationEpisodeLogger:
             f.flush()
 
 
-def default_episode_log_path(*, base_dir: str | Path = "logs") -> Path:
+@dataclass
+class TsvLogger:
+    """Append rows to a TSV file with a fixed header."""
+
+    path: Path
+    fieldnames: Iterable[str]
+
+    def __post_init__(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.fieldnames = tuple(self.fieldnames)
+        if not self.path.exists():
+            header = "\t".join(self.fieldnames) + "\n"
+            self.path.write_text(header, encoding="utf-8")
+
+    def log(self, **values: object) -> None:
+        row = "\t".join(str(values.get(field, "")) for field in self.fieldnames) + "\n"
+        with self.path.open("a", encoding="utf-8") as f:
+            f.write(row)
+            f.flush()
+
+
+def default_episode_log_path(*, base_dir: str | Path = "logs", prefix: str = "train") -> Path:
     """Create a timestamped default path like logs/train_YYYYmmdd_HHMMSS.tsv."""
 
     base = Path(base_dir)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    return base / f"train_{ts}.tsv"
+    return base / f"{prefix}_{ts}.tsv"
 
 
 def default_validation_log_path(*, base_dir: str | Path = "logs") -> Path:

@@ -1,24 +1,25 @@
-[2026-04-26T00:41:48.627865+01:00] ***Starting server on port 45957 ***
-[2026-04-26T00:41:49.593840+01:00] Loading net-file from 'scenarios/bologna_joined/joined_buslanes.net.xml' ... done (23ms).
-[2026-04-26T00:41:49.621026+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
-[2026-04-26T00:41:49.621926+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
-[2026-04-26T00:41:49.622927+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
-[2026-04-26T00:41:49.623453+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_tls.add.xml' ... done (1ms).
-[2026-04-26T00:41:49.625137+01:00] Loading route-files incrementally from 'scenarios/bologna_joined/joined.rou.xml'
-[2026-04-26T00:41:49.625157+01:00] Loading route-files incrementally from 'scenarios/bologna_joined/joined_busses.rou.xml'
-[2026-04-26T00:41:49.625165+01:00] Loading done.
-[2026-04-26T00:41:49.626261+01:00] Simulation version 1.26.0 started with time: 0.00.
-[2026-04-26T00:41:50.458346+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
-[2026-04-26T00:41:52.484966+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=454.00, stage=move.
-[2026-04-26T00:41:52.656037+01:00] Simulation ended at time: 472.00.
-[2026-04-26T00:41:52.656064+01:00] Reason: TraCI requested termination.
-[2026-04-26T00:41:52.656971+01:00] Performance:
- Duration: 3.04s
- TraCI-Duration: 1.74s
- Real time factor: 155.468
- UPS: 76426.877470
+[2026-05-01T19:50:24.403292+01:00] ***Starting server on port 56228 ***
+[2026-05-01T19:50:25.264500+01:00] Loading net-file from 'scenarios/bologna_joined/joined_buslanes.net.xml' ... done (35ms).
+[2026-05-01T19:50:25.303492+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
+[2026-05-01T19:50:25.303912+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
+[2026-05-01T19:50:25.304710+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+[2026-05-01T19:50:25.305346+01:00] Loading additional-files from 'scenarios/bologna_joined/joined_tls.add.xml' ... done (0ms).
+[2026-05-01T19:50:25.306962+01:00] Loading route-files incrementally from 'scenarios/bologna_joined/joined.rou.xml'
+[2026-05-01T19:50:25.306977+01:00] Loading route-files incrementally from 'scenarios/bologna_joined/joined_busses.rou.xml'
+[2026-05-01T19:50:25.306991+01:00] Loading done.
+[2026-05-01T19:50:25.307965+01:00] Simulation version 1.26.0 started with time: 0.00.
+[2026-05-01T19:50:25.620494+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=184.00, stage=move.
+[2026-05-01T19:50:26.174169+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-05-01T19:50:26.584529+01:00] Warning: Vehicle 'Costa_200_104'; junction collision with vehicle 'bus_140_360', lane=':a27_10_0', gap=-1.00, time=455.00, stage=move.
+[2026-05-01T19:50:26.680122+01:00] Simulation ended at time: 482.00.
+[2026-05-01T19:50:26.680145+01:00] Reason: TraCI requested termination.
+[2026-05-01T19:50:26.680482+01:00] Performance:
+ Duration: 1.38s
+ TraCI-Duration: 0.89s
+ Real time factor: 350.036
+ UPS: 174948.438635
 Vehicles:
- Inserted: 1416 (Loaded: 1850)
- Running: 753
- Waiting: 0
- Teleports: 0 (Collisions: 2)
+ Inserted: 1444 (Loaded: 1850)
+ Running: 772
+ Waiting: 3
+ Teleports: 0 (Collisions: 3)

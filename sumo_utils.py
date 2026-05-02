@@ -143,7 +143,7 @@ def spawn_ego(route_id, wait_steps=30):
         if EGO_ID in traci.vehicle.getIDList():
             try:
                 if CURRENT_USE_GUI:
-                    traci.vehicle.setColor(EGO_ID, (255, 0, 0, 255))
+                    traci.vehicle.setColor(EGO_ID, (255, 255, 255, 255))
             except Exception:
                 pass
 

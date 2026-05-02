@@ -46,8 +46,9 @@ from sumo_utils import (
 # =============================================================================
 # НАСТРОЙКИ ЗАПУСКА
 # =============================================================================
-
-CHECKPOINT_PATH = "ppo_ego_episode_500.pth"
+BASE_DIR = Path(__file__).resolve().parent
+print(BASE_DIR)
+CHECKPOINT_PATH = str(BASE_DIR / "ppo_training" / "ppo_ego_episode_1000.pth")
 
 # Можно указать конкретный маршрут, например "ego_route_2".
 # Если поставить None, маршрут выберется из EGO_ROUTE_POOL по ROUTE_INDEX.
@@ -58,7 +59,7 @@ ROUTE_INDEX = 0
 SLEEP_PER_STEP = 0.5
 
 # Чем больше, тем медленнее проигрывание внутри SUMO GUI.
-SUMO_GUI_DELAY_MS = 500
+SUMO_GUI_DELAY_MS = 100
 
 # Паузы, чтобы окно успевало открыться и ты мог посмотреть.
 STARTUP_WAIT_SECONDS = 3.0
@@ -81,7 +82,7 @@ SUMO_CONFIG = None
 # ПАРАМЕТРЫ ENV / MODEL
 # =============================================================================
 
-OBS_SIZE = 8
+OBS_SIZE = 12
 N_ACTIONS = len(Action)
 ACTIONS = list(Action)
 
@@ -159,7 +160,7 @@ def resolve_sumo_config():
         if value:
             return str(value)
 
-    sumocfg_files = sorted(Path(".").glob("*.sumocfg"))
+    sumocfg_files = sorted(Path("..").glob("*.sumocfg"))
     if len(sumocfg_files) == 1:
         return str(sumocfg_files[0])
 

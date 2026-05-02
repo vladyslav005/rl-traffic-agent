@@ -1,7 +1,11 @@
+from pathlib import Path
+
 import torch
 
 SUMO_BINARY = "sumo"   # use "sumo" for faster training without GUI
-SUMO_CONFIG = "scenarios/bologna_joined/run.sumocfg"
+BASE_DIR = Path(__file__).resolve().parent
+
+SUMO_CONFIG = str(BASE_DIR / "scenarios" / "bologna_joined" / "run.sumocfg")
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

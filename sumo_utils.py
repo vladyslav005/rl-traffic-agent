@@ -4,25 +4,36 @@ import numpy as np
 import traci
 from traci import TraCIException
 
-from Action import ACTION_TO_DELTA_V, Action
+from Action import ACTION_TO_DELTA_V
 from config import *
 
 CURRENT_USE_GUI = False
+CURRENT_SUMO_CONFIG: str = SUMO_CONFIG
+CURRENT_TRAFFIC_SCALE: float = 1.0
 
 
-def start_sumo(use_gui=False,
+def start_sumo(
+               use_gui=False,
                log_dir="sim_logs",
                quiet_console=False,
-               hide_warnings=False):
-    global CURRENT_USE_GUI
+               hide_warnings=False,
+               sumo_config: str | None = None,
+               traffic_scale: float | None = None,
+):
+    global CURRENT_USE_GUI, CURRENT_SUMO_CONFIG, CURRENT_TRAFFIC_SCALE
     CURRENT_USE_GUI = use_gui
+
+    if sumo_config is not None:
+        CURRENT_SUMO_CONFIG = sumo_config
+    if traffic_scale is not None:
+        CURRENT_TRAFFIC_SCALE = float(traffic_scale)
 
     os.makedirs(log_dir, exist_ok=True)
 
     binary = "sumo-gui" if use_gui else SUMO_BINARY
     cmd = [
         binary,
-        "-c", SUMO_CONFIG,
+        "-c", CURRENT_SUMO_CONFIG,
         "--collision.action", "warn",
         "--collision.check-junctions", "true",
         "--collision.mingap-factor", "0",
@@ -30,6 +41,10 @@ def start_sumo(use_gui=False,
         "--log", os.path.join(log_dir, "sumo.log"),
         "--log.timestamps", "true",
     ]
+
+    # Traffic scaling (SUMO's --scale scales flows/vehicles; safe no-op if scenario has no flows)
+    if CURRENT_TRAFFIC_SCALE != 1.0:
+        cmd += ["--scale", str(CURRENT_TRAFFIC_SCALE)]
 
     if quiet_console:
         cmd += ["--no-step-log", "true"]
@@ -49,13 +64,17 @@ def _traci_is_connected() -> bool:
         return False
 
 
-def reset_sumo(use_gui=None):
+def reset_sumo(use_gui=None, *, sumo_config: str | None = None, traffic_scale: float | None = None):
     """Reset strategy: close current simulation and restart.
 
     Args:
         use_gui:
             - None: restart with the same mode as the current run (CURRENT_USE_GUI)
             - bool: explicitly restart in GUI/headless mode
+        sumo_config:
+            Optional override for the SUMO .sumocfg path.
+        traffic_scale:
+            Optional override for SUMO's `--scale` (float).
     """
     if use_gui is None:
         use_gui = CURRENT_USE_GUI
@@ -67,7 +86,7 @@ def reset_sumo(use_gui=None):
         except Exception:
             pass
 
-    start_sumo(use_gui=use_gui)
+    start_sumo(use_gui=use_gui, sumo_config=sumo_config, traffic_scale=traffic_scale)
 
 
 def spawn_ego(route_id, wait_steps=30):

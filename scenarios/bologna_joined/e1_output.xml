@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-05-02T19:46:27.144228+01:00 by Eclipse SUMO GUI 1.26.0
+<!-- generated on 2026-04-29T21:29:40.126782+01:00 by Eclipse SUMO sumo 1.26.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml"/>
-        <route-files value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml"/>
-        <additional-files value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml"/>
+        <net-file value="scenarios/bologna_joined/joined_buslanes.net.xml"/>
+        <route-files value="scenarios/bologna_joined/joined.rou.xml,scenarios/bologna_joined/joined_busses.rou.xml"/>
+        <additional-files value="scenarios/bologna_joined/joined_bus_stops.add.xml,scenarios/bologna_joined/joined_detectors.add.xml,scenarios/bologna_joined/joined_vtypes.add.xml,scenarios/bologna_joined/joined_tls.add.xml"/>
     </input>
 
     <output>
-        <tripinfo-output value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/tripinfos.xml"/>
-        <save-state.prefix value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/state"/>
+        <tripinfo-output value="scenarios/bologna_joined/tripinfos.xml"/>
+        <save-state.prefix value="scenarios/bologna_joined/state"/>
     </output>
 
+    <processing>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <collision.mingap-factor value="0"/>
+        <scale value="5.0"/>
+    </processing>
+
     <report>
-        <log value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/sumo_log.txt"/>
+        <aggregate-warnings value="5"/>
+        <log value="sim_logs/sumo.log"/>
+        <log.timestamps value="true"/>
         <no-step-log value="true"/>
     </report>
 
     <traci_server>
-        <remote-port value="62718"/>
+        <remote-port value="39741"/>
     </traci_server>
-
-    <gui_only>
-        <quit-on-end value="false"/>
-        <start value="true"/>
-        <delay value="100"/>
-    </gui_only>
 
 </sumoConfiguration>

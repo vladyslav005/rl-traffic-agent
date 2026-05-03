@@ -33,6 +33,10 @@ import config
 from ego_events import EgoEventState, accumulate_ego_events
 from logger_utils import ValidationEpisodeLogger, default_validation_log_path
 
+# --- PPO validation imports (kept optional-ish to avoid affecting DQN-only users) ---
+from ppo.PPO_actor_critic import Actor as PPOActor
+from torch.distributions import Categorical
+
 
 def epsilon_by_step(global_step):
     frac = min(1.0, global_step / EPS_DECAY)
@@ -350,6 +354,162 @@ def run_loaded_model_on_route(
     return episode_reward, max_steps, "timeout", metrics
 
 
+def run_loaded_ppo_model_on_route(
+    model_path: str,
+    route_id: str,
+    use_gui: bool = False,
+    max_steps: int | None = None,
+    *,
+    sumo_config: str | None = None,
+    traffic_scale: float = 1.0,
+    deterministic: bool = True,
+):
+    """Load a trained PPO actor checkpoint and run one evaluation episode on a chosen route.
+
+    The PPO checkpoint is expected to be the dict saved by `ppo/train_ppo.py` with at
+    least the key `actor_state_dict`.
+
+    Returns:
+        (episode_reward, steps, end_reason, metrics_dict)
+    """
+
+    if max_steps is None:
+        max_steps = MAX_STEPS_PER_EPISODE
+
+    # Start TraCI/SUMO if not already started
+    try:
+        traci.getConnection()
+    except Exception:
+        start_sumo(use_gui=use_gui, sumo_config=sumo_config, traffic_scale=traffic_scale)
+
+    checkpoint = torch.load(model_path, map_location=DEVICE)
+    if not isinstance(checkpoint, dict) or "actor_state_dict" not in checkpoint:
+        raise ValueError(
+            f"PPO checkpoint at {model_path!r} is expected to be a dict with key 'actor_state_dict'."
+        )
+
+    obs_size = 12  # keep in sync with sumo_utils.get_state()
+    n_actions = len(Action)
+
+    actor = PPOActor(obs_size, n_actions).to(DEVICE)
+    actor.load_state_dict(checkpoint["actor_state_dict"])
+    actor.eval()
+
+    reset_sumo(use_gui=use_gui, sumo_config=sumo_config, traffic_scale=traffic_scale)
+
+    ok, reason = spawn_ego(route_id)
+    if not ok:
+        metrics = {
+            "ego_collision_events": 0,
+            "ego_teleport": 0,
+            "ego_emergency_stop": 0,
+            "ego_crash": 0,
+            "sim_time_end": float(getattr(traci.simulation, "getTime", lambda: 0.0)()),
+        }
+        return 0.0, 0, f"spawn_failed:{reason}", metrics
+
+    episode_reward = 0.0
+    state = get_state(EGO_ID)
+
+    event_state = EgoEventState()
+    ego_collision_events = 0
+    ego_teleport = 0
+    ego_emergency_stop = 0
+    ego_crash = 0
+
+    for step in range(max_steps):
+        with torch.no_grad():
+            state_t = torch.as_tensor(state, dtype=torch.float32, device=DEVICE).unsqueeze(0)
+            logits = actor(state_t)
+            if deterministic:
+                action_idx = int(torch.argmax(logits, dim=-1).item())
+            else:
+                dist = Categorical(logits=logits)
+                action_idx = int(dist.sample().item())
+            action = Action(action_idx)
+
+        delta_v = apply_action(EGO_ID, action)
+        traci.simulationStep()
+
+        # Incident accounting (de-duplicated, same as DQN validation)
+        collision_events = traci.simulation.getCollisions()
+        teleport_ids = traci.simulation.getStartingTeleportIDList()
+        emergency_ids = traci.simulation.getEmergencyStoppingVehiclesIDList()
+
+        event_state, delta = accumulate_ego_events(
+            state=event_state,
+            ego_id=EGO_ID,
+            sim_time=traci.simulation.getTime(),
+            collisions=collision_events,
+            teleport_ids=teleport_ids,
+            emergency_ids=emergency_ids,
+        )
+        ego_collision_events += delta.total_ego_collisions
+        ego_teleport += delta.total_ego_teleports
+        ego_emergency_stop += delta.total_ego_emergency_stops
+        ego_crash = 1 if (ego_crash or delta.total_ego_crashes > 0) else 0
+
+        # Terminal checks
+        if EGO_ID in traci.simulation.getCollidingVehiclesIDList():
+            reward = -30.0
+            episode_reward += reward
+            metrics = {
+                "ego_collision_events": ego_collision_events,
+                "ego_teleport": ego_teleport,
+                "ego_emergency_stop": ego_emergency_stop,
+                "ego_crash": 1,
+                "sim_time_end": float(traci.simulation.getTime()),
+            }
+            return episode_reward, step + 1, "ego_crash", metrics
+
+        if is_arrived():
+            reward = 20.0
+            episode_reward += reward
+            metrics = {
+                "ego_collision_events": ego_collision_events,
+                "ego_teleport": ego_teleport,
+                "ego_emergency_stop": ego_emergency_stop,
+                "ego_crash": ego_crash,
+                "sim_time_end": float(traci.simulation.getTime()),
+            }
+            return episode_reward, step + 1, "arrived", metrics
+
+        if is_abnormal_disappearance():
+            reward = -20.0
+            episode_reward += reward
+            metrics = {
+                "ego_collision_events": ego_collision_events,
+                "ego_teleport": ego_teleport,
+                "ego_emergency_stop": ego_emergency_stop,
+                "ego_crash": 1 if ego_crash else 0,
+                "sim_time_end": float(traci.simulation.getTime()),
+            }
+            return episode_reward, step + 1, "abnormal_end", metrics
+
+        if not ego_exists():
+            metrics = {
+                "ego_collision_events": ego_collision_events,
+                "ego_teleport": ego_teleport,
+                "ego_emergency_stop": ego_emergency_stop,
+                "ego_crash": ego_crash,
+                "sim_time_end": float(traci.simulation.getTime()),
+            }
+            return episode_reward, step + 1, "ego_missing", metrics
+
+        reward = compute_reward(EGO_ID, delta_v)
+        episode_reward += reward
+        state = get_state(EGO_ID)
+
+    metrics = {
+        "ego_collision_events": ego_collision_events,
+        "ego_teleport": ego_teleport,
+        "ego_emergency_stop": ego_emergency_stop,
+        "ego_crash": ego_crash,
+        "sim_time_end": float(traci.simulation.getTime()),
+    }
+    return episode_reward, max_steps, "timeout", metrics
+
+
 def validate_model_on_routes(
     *,
     model_path: str,
@@ -412,3 +572,67 @@ def validate_model_on_routes(
             )
 
     return out_tsv_path
+
+
+def validate_ppo_model_on_routes(
+    *,
+    model_path: str,
+    sumo_config: str,
+    traffic_scales: list[float] | tuple[float, ...] = (2, 3, 5),
+    use_gui: bool = False,
+    max_steps: int | None = None,
+    out_tsv_path: str | None = None,
+    deterministic: bool = True,
+) -> str:
+    """Run PPO validation across all `config.VALIDATION_ROUTES` and traffic scales.
+
+    Output TSV format matches `validate_model_on_routes()` so you can compare runs.
+
+    Returns:
+        TSV output path.
+    """
+
+    if out_tsv_path is None:
+        out_tsv_path = str(default_validation_log_path())
+
+    logger = ValidationEpisodeLogger(path=__import__("pathlib").Path(out_tsv_path))
+
+    combo_episode = 0
+
+    # Ensure SUMO is started once (reset will be called per episode)
+    try:
+        traci.getConnection()
+    except Exception:
+        start_sumo(use_gui=use_gui, sumo_config=sumo_config, traffic_scale=1.0)
+
+    for scale in traffic_scales:
+        for route_id in config.VALIDATION_ROUTES:
+            combo_episode += 1
+            reward, steps, end_reason, metrics = run_loaded_ppo_model_on_route(
+                model_path,
+                route_id,
+                use_gui=use_gui,
+                max_steps=max_steps,
+                sumo_config=sumo_config,
+                traffic_scale=float(scale),
+                deterministic=deterministic,
+            )
+
+            logger.log(
+                combo_episode=combo_episode,
+                route_id=route_id,
+                traffic_scale=float(scale),
+                reward=float(reward),
+                steps=int(steps),
+                end_reason=str(end_reason),
+                ego_crash=int(metrics.get("ego_crash", 0)),
+                ego_collision_events=int(metrics.get("ego_collision_events", 0)),
+                ego_teleport=int(metrics.get("ego_teleport", 0)),
+                ego_emergency_stop=int(metrics.get("ego_emergency_stop", 0)),
+                sim_time_end=float(metrics.get("sim_time_end", 0.0)),
+                model_path=str(model_path),
+                sumo_config=str(sumo_config),
+            )
+
+    return out_tsv_path
+

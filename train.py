@@ -93,6 +93,6 @@ for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
 
     # optional checkpoint
     if (episode + 1) % 50 == 0:
-        torch.save(policy_net.state_dict(), f"dqn_training_4/dqn_ego_episode_{episode+1}.pth")
+        torch.save(policy_net.state_dict(), f"dqn_training_5/dqn_ego_episode_{episode+1}.pth")
 
 traci.close()

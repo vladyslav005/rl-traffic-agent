@@ -1,4 +1,4 @@
-# rl-traffic-agent
+# RL Traffic Agent
 
 RL training of an ego vehicle in **SUMO** using **TraCI**.  
 Implemented algorithms:
@@ -45,5 +45,3 @@ python validate_ppo.py
 * validation runs on separate routes and traffic scales
 * logs are written to `logs/`
 
-```
-```

@@ -1,4 +1,3 @@
-````markdown
 # rl-traffic-agent
 
 RL training of an ego vehicle in **SUMO** using **TraCI**.  

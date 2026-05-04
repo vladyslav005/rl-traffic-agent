@@ -1,21 +1,12 @@
-[2026-05-03T21:51:09.756239+01:00] ***Starting server on port 39645 ***
-[2026-05-03T21:51:10.723366+01:00] Loading net-file from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (22ms).
-[2026-05-03T21:51:10.749697+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (1ms).
-[2026-05-03T21:51:10.750291+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
-[2026-05-03T21:51:10.751162+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (0ms).
-[2026-05-03T21:51:10.751668+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (1ms).
-[2026-05-03T21:51:10.753330+01:00] Loading route-files incrementally from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
-[2026-05-03T21:51:10.753341+01:00] Loading route-files incrementally from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
-[2026-05-03T21:51:10.753349+01:00] Loading done.
-[2026-05-03T21:51:10.755181+01:00] Simulation version 1.26.0 started with time: 0.00.
-[2026-05-03T21:51:10.990325+01:00] Warning: Vehicle 'bus_12_0.1'; junction collision with vehicle 'Pertini_20_7.1', lane=':b4_3_0', gap=-1.00, time=71.00, stage=move.
-[2026-05-03T21:51:11.011104+01:00] Warning: Vehicle 'Pertini_20_7.3'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=76.00, stage=move.
-[2026-05-03T21:51:11.062317+01:00] Warning: Vehicle 'Pertini_20_9.3'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=88.00, stage=move.
-[2026-05-03T21:51:11.090452+01:00] Warning: Vehicle 'Pertini_20_10'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=94.00, stage=move.
-[2026-05-03T21:51:11.143528+01:00] Warning: Vehicle 'Pertini_20_10.4'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=104.00, stage=move.
-[2026-05-03T21:51:11.154353+01:00] Warning: Vehicle 'Pertini_20_11.1'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=106.00, stage=move.
-[2026-05-03T21:51:11.165575+01:00] Warning: Vehicle 'bus_12_0.1'; junction collision with vehicle 'Pertini_20_11.3', lane=':b4_3_0', gap=-1.00, time=108.00, stage=move.
-[2026-05-03T21:51:11.170867+01:00] Warning: Vehicle 'Pertini_20_11.4'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=109.00, stage=move.
-[2026-05-03T21:51:11.229784+01:00] Warning: Vehicle 'Pertini_20_12.4'; junction collision with vehicle 'bus_12_0.1', lane=':b4_9_1', gap=-1.00, time=118.00, stage=move.
-[2026-05-03T21:51:11.395616+01:00] Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
-[2026-05-03T21:51:11.395666+01:00] Quitting (on error).
+[2026-05-04T22:43:08.627047+01:00] ***Starting server on port 35849 ***
+[2026-05-04T22:43:09.583009+01:00] Loading net-file from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (31ms).
+[2026-05-04T22:43:09.619338+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (1ms).
+[2026-05-04T22:43:09.620301+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (2ms).
+[2026-05-04T22:43:09.622178+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+[2026-05-04T22:43:09.623367+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (1ms).
+[2026-05-04T22:43:09.626265+01:00] Loading route-files incrementally from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
+[2026-05-04T22:43:09.626304+01:00] Loading route-files incrementally from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
+[2026-05-04T22:43:09.626314+01:00] Loading done.
+[2026-05-04T22:43:09.628255+01:00] Simulation version 1.26.0 started with time: 0.00.
+[2026-05-04T22:43:10.154621+01:00] Error: tcpip::Socket::recvAndCheck @ recv: Connection reset by peer
+[2026-05-04T22:43:10.154694+01:00] Quitting (on error).

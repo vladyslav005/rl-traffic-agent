@@ -47,18 +47,16 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
-    args = build_parser().parse_args()
-
     scales = [2, 3, 5]
 
     out_path = validate_ppo_model_on_routes(
-        model_path="ppo/ppo_training/ppo_ego_episode_500.pth",
+        model_path="ppo/ppo_training/ppo_ego_episode_1500.pth",
         sumo_config=SUMO_CONFIG,
         traffic_scales=scales,
-        deterministic=not bool(args.stochastic),
+        deterministic=False,
         use_gui=False,
         max_steps=1500,
-        out_tsv_path='ppo/validation_results_PPO.tsv',
+        out_tsv_path='ppo/validation_results_PPO1.tsv',
     )
 
     print(out_path)

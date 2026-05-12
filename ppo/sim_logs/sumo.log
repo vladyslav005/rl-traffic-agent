@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [2026-05-12T20:17:33.876772+01:00] ***Starting server on port 53405 ***
 [2026-05-12T20:17:34.619969+01:00] Loading net-file from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (32ms).
 [2026-05-12T20:17:34.655323+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
@@ -19,3 +20,29 @@ Vehicles:
  Inserted: 372 (Loaded: 620)
  Running: 342
  Waiting: 0
+=======
+[2026-05-04T00:15:16.246647+01:00] ***Starting server on port 59760 ***
+[2026-05-04T00:15:17.109188+01:00] Loading net-file from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (33ms).
+[2026-05-04T00:15:17.146134+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
+[2026-05-04T00:15:17.146552+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
+[2026-05-04T00:15:17.147432+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+[2026-05-04T00:15:17.148101+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (0ms).
+[2026-05-04T00:15:17.149635+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
+[2026-05-04T00:15:17.149652+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
+[2026-05-04T00:15:17.149667+01:00] Loading done.
+[2026-05-04T00:15:17.150726+01:00] Simulation version 1.26.0 started with time: 0.00.
+[2026-05-04T00:15:17.482983+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-05-04T00:15:18.033473+01:00] Warning: Vehicle 'Pertini_73_131'; junction collision with vehicle 'bus_6_60', lane=':b18_10_0', gap=-1.00, time=353.00, stage=move.
+[2026-05-04T00:15:18.123919+01:00] Simulation ended at time: 368.00.
+[2026-05-04T00:15:18.123937+01:00] Reason: TraCI requested termination.
+[2026-05-04T00:15:18.124268+01:00] Performance:
+ Duration: 0.98s
+ TraCI-Duration: 0.64s
+ Real time factor: 376.278
+ UPS: 158102.249489
+Vehicles:
+ Inserted: 1100 (Loaded: 1231)
+ Running: 695
+ Waiting: 1
+ Teleports: 0 (Collisions: 2)
+>>>>>>> Stashed changes

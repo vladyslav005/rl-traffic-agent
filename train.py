@@ -16,8 +16,8 @@ import sys
 # Choose whether to resume from a checkpoint.
 # RESUME_PATH = "./dqn_training/dqn_ego_episode_500.pth"
 # RESUME_OPTIM_PATH = "./dqn_training/dqn_ego_episode_500.optim.pth"
-RESUME_PATH = False #"./dqn_training/dqn_ego_episode_500.pth"
-RESUME_OPTIM_PATH = False #"./dqn_training/dqn_ego_episode_500.optim.pth"
+RESUME_PATH = "./dqn_training_5/dqn_ego_episode_500.pth"
+RESUME_OPTIM_PATH = "./dqn_training_5/dqn_ego_episode_500.optim.pth"
 START_EPISODE = 0
 
 # Start SUMO once; each episode calls reset_sumo() internally.
@@ -93,6 +93,6 @@ for episode in range(START_EPISODE, START_EPISODE + NUM_EPISODES):
 
     # optional checkpoint
     if (episode + 1) % 50 == 0:
-        torch.save(policy_net.state_dict(), f"dqn_training_5/dqn_ego_episode_{episode+1}.pth")
+        torch.save(policy_net.state_dict(), f"dqn_training_6/dqn_ego_episode_{episode+1}.pth")
 
 traci.close()

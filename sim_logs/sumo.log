@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [2026-05-04T22:43:08.627047+01:00] ***Starting server on port 35849 ***
 [2026-05-04T22:43:09.583009+01:00] Loading net-file from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (31ms).
 [2026-05-04T22:43:09.619338+01:00] Loading additional-files from '/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (1ms).
@@ -10,3 +11,28 @@
 [2026-05-04T22:43:09.628255+01:00] Simulation version 1.26.0 started with time: 0.00.
 [2026-05-04T22:43:10.154621+01:00] Error: tcpip::Socket::recvAndCheck @ recv: Connection reset by peer
 [2026-05-04T22:43:10.154694+01:00] Quitting (on error).
+=======
+[2026-05-05T00:02:24.909859+01:00] ***Starting server on port 50192 ***
+[2026-05-05T00:02:25.654468+01:00] Loading net-file from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (35ms).
+[2026-05-05T00:02:25.693517+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
+[2026-05-05T00:02:25.694001+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
+[2026-05-05T00:02:25.694682+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+[2026-05-05T00:02:25.695241+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (0ms).
+[2026-05-05T00:02:25.696715+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
+[2026-05-05T00:02:25.696729+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
+[2026-05-05T00:02:25.696741+01:00] Loading done.
+[2026-05-05T00:02:25.697593+01:00] Simulation version 1.26.0 started with time: 0.00.
+[2026-05-05T00:02:26.243739+01:00] Warning: Vehicle 'Turati_10_1'; junction collision with vehicle 'bus_140_120', lane=':a27_10_0', gap=-1.00, time=185.00, stage=move.
+[2026-05-05T00:02:26.771279+01:00] Simulation ended at time: 324.00.
+[2026-05-05T00:02:26.771299+01:00] Reason: TraCI requested termination.
+[2026-05-05T00:02:26.771590+01:00] Performance:
+ Duration: 1.08s
+ TraCI-Duration: 0.85s
+ Real time factor: 300.557
+ UPS: 116039.888683
+Vehicles:
+ Inserted: 963 (Loaded: 1231)
+ Running: 653
+ Waiting: 3
+ Teleports: 0 (Collisions: 1)
+>>>>>>> Stashed changes

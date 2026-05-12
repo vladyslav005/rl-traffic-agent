@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< Updated upstream
 <!-- generated on 2026-05-04T22:43:09.620595+01:00 by Eclipse SUMO sumo 1.26.0
+=======
+<!-- generated on 2026-05-06T00:04:09.123161+01:00 by Eclipse SUMO GUI 1.26.0
+>>>>>>> Stashed changes
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml"/>
-        <route-files value="/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml,/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml"/>
-        <additional-files value="/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml,/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml,/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml,/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml"/>
+        <net-file value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml"/>
+        <route-files value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml"/>
+        <additional-files value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml,/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml"/>
     </input>
 
     <output>
-        <tripinfo-output value="/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/tripinfos.xml"/>
-        <save-state.prefix value="/home/vladik/repositories/rl-traffic-agent/scenarios/bologna_joined/state"/>
+        <tripinfo-output value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/tripinfos.xml"/>
+        <save-state.prefix value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/state"/>
     </output>
 
+<<<<<<< Updated upstream
     <processing>
         <collision.action value="warn"/>
         <collision.check-junctions value="true"/>
@@ -21,19 +26,25 @@
         <scale value="2.0"/>
     </processing>
 
+=======
+>>>>>>> Stashed changes
     <report>
-        <aggregate-warnings value="5"/>
-        <log value="sim_logs/sumo.log"/>
-        <log.timestamps value="true"/>
+        <log value="/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/sumo_log.txt"/>
         <no-step-log value="true"/>
     </report>
 
     <traci_server>
+<<<<<<< Updated upstream
         <remote-port value="35849"/>
+=======
+        <remote-port value="60770"/>
+>>>>>>> Stashed changes
     </traci_server>
 
-</sumoConfiguration>
--->
+    <gui_only>
+        <quit-on-end value="false"/>
+        <start value="true"/>
+        <delay value="100"/>
+    </gui_only>
 
-<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
-</detector>
+</sumoConfiguration>

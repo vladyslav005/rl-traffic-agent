@@ -1,0 +1,21 @@
+[2026-05-12T20:17:33.876772+01:00] ***Starting server on port 53405 ***
+[2026-05-12T20:17:34.619969+01:00] Loading net-file from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_buslanes.net.xml' ... done (32ms).
+[2026-05-12T20:17:34.655323+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_bus_stops.add.xml' ... done (0ms).
+[2026-05-12T20:17:34.655801+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_detectors.add.xml' ... done (1ms).
+[2026-05-12T20:17:34.656562+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_vtypes.add.xml' ... done (1ms).
+[2026-05-12T20:17:34.657249+01:00] Loading additional-files from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_tls.add.xml' ... done (0ms).
+[2026-05-12T20:17:34.659027+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined.rou.xml'
+[2026-05-12T20:17:34.659041+01:00] Loading route-files incrementally from '/Users/serhiilavreniuk/repositories/rl-traffic-agent/scenarios/bologna_joined/joined_busses.rou.xml'
+[2026-05-12T20:17:34.659052+01:00] Loading done.
+[2026-05-12T20:17:34.659943+01:00] Simulation version 1.26.0 started with time: 0.00.
+[2026-05-12T20:17:34.870824+01:00] Simulation ended at time: 128.00.
+[2026-05-12T20:17:34.870840+01:00] Reason: TraCI requested termination.
+[2026-05-12T20:17:34.871106+01:00] Performance:
+ Duration: 0.22s
+ TraCI-Duration: 0.15s
+ Real time factor: 592.593
+ UPS: 100787.037037
+Vehicles:
+ Inserted: 372 (Loaded: 620)
+ Running: 342
+ Waiting: 0

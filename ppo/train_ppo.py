@@ -88,6 +88,7 @@ class RolloutBuffer: # stores trajectories collected from one or more episodes, 
 @dataclass
 class EpisodeResult:
     rollout: RolloutBuffer
+    route_id: str
     reward: float
     steps: int
     global_step: int
@@ -191,6 +192,7 @@ def run_ppo_episode(actor: Actor, critic: Critic, global_step: int) -> EpisodeRe
     if not spawn_ok:
         return EpisodeResult(
             rollout=rollout,
+            route_id=route_id,
             reward=0.0,
             steps=0,
             global_step=global_step,
@@ -201,6 +203,7 @@ def run_ppo_episode(actor: Actor, critic: Critic, global_step: int) -> EpisodeRe
     if not ego_exists():
         return EpisodeResult(
             rollout=rollout,
+            route_id=route_id,
             reward=0.0,
             steps=0,
             global_step=global_step,
@@ -265,6 +268,7 @@ def run_ppo_episode(actor: Actor, critic: Critic, global_step: int) -> EpisodeRe
 
     return EpisodeResult(
         rollout=rollout,
+        route_id=route_id,
         reward=episode_reward,
         steps=steps_taken,
         global_step=global_step,
@@ -553,6 +557,7 @@ def main() -> None:
                     reward=result.reward,
                     steps=result.steps,
                     end_reason=result.end_reason,
+                    route_id=result.route_id,
                     total_ego_crashes=config.TOTAL_EGO_CRASHES,
                     total_collision_events=config.TOTAL_COLLISION_EVENTS,
                     total_ego_collisions=config.TOTAL_EGO_COLLISIONS,
